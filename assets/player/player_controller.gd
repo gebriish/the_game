@@ -37,7 +37,6 @@ var wall_jump_lock = 0.0
 
 var sprite_color = "red"
 
-
 func _physics_process(delta):
 	apply_gravity(delta)
 	get_input_axis()
@@ -87,15 +86,12 @@ func _physics_process(delta):
 	vel = velocity
 
 	apply_debug_rotation()
-	set_sprite_color()
-
 
 func get_input_axis():
 	axis = Vector2(
 		float(Input.is_action_pressed("right")) - float(Input.is_action_pressed("left")),
 		0
 	).normalized()
-
 
 func check_wall():
 	on_wall = false
@@ -160,7 +156,9 @@ func do_wall_jump():
 	vel.y = WALL_JUMP_VELOCITY
 	vel.x = wall_dir * strong_push
 	wall_jump_lock = WALL_JUMP_CONTROL_LOCK
-
+	if input_dir == 0 :
+		$Rotatable.scale.x = -sign($Rotatable.scale.x)
+	
 
 func apply_variable_jump(delta):
 	if not Input.is_action_pressed("jump") and vel.y < 0:
@@ -174,10 +172,3 @@ func apply_debug_rotation():
 	if axis.x != 0 and abs(vel.x) > 0.01:
 		t = -deg_to_rad(5) * axis.x
 	$Rotatable.rotation = lerp($Rotatable.rotation, t, 0.7)
-
-
-func set_sprite_color():
-	if sprite_color == "red":
-		$Rotatable/Sprite2D.modulate = Color(1, 0, 0)
-	else:
-		$Rotatable/Sprite2D.modulate = Color(0, 0, 1)
