@@ -12,7 +12,7 @@ var _look_offset := Vector2.ZERO
 func _ready() -> void:
 	player = get_node("../Player")
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	var p := player.global_position
 	var cam := global_position
 
