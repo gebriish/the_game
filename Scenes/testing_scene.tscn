@@ -20,7 +20,7 @@ font = ExtResource("6_mhjv0")
 font_size = 32
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mhjv0"]
-size = Vector2(939.85657, 260.97705)
+size = Vector2(586.5383, 260.97705)
 
 [node name="Node2D" type="Node2D"]
 
@@ -295,7 +295,7 @@ shape = SubResource("RectangleShape2D_ybjcv")
 
 [node name="Block9" type="Node2D" parent="Level_Geom"]
 z_index = 2
-position = Vector2(837.00006, 253)
+position = Vector2(839, 278.99997)
 rotation = 3.1415927
 scale = Vector2(-5.8866844, 12.120162)
 
@@ -492,6 +492,7 @@ text = "tap [space] or [gamepad A]
 label_settings = SubResource("LabelSettings_ulum1")
 
 [node name="Area2D" type="Area2D" parent="Tutrial/Tutorial"]
+scale = Vector2(0.5901946, 0.8142414)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tutrial/Tutorial/Area2D"]
 position = Vector2(8, -69)
@@ -514,7 +515,8 @@ text = "[keyboard arrow/A/D]
 label_settings = SubResource("LabelSettings_ulum1")
 
 [node name="Area2D" type="Area2D" parent="Tutrial/Tutorial2"]
-position = Vector2(-25, 29)
+position = Vector2(18, 19)
+scale = Vector2(0.50659645, 0.8720921)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tutrial/Tutorial2/Area2D"]
 position = Vector2(8, -69)
@@ -535,6 +537,7 @@ text = "long press for high jump!"
 label_settings = SubResource("LabelSettings_ulum1")
 
 [node name="Area2D" type="Area2D" parent="Tutrial/Tutorial3"]
+scale = Vector2(0.7798506, 0.9356378)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tutrial/Tutorial3/Area2D"]
 position = Vector2(8, -69)
@@ -557,7 +560,7 @@ label_settings = SubResource("LabelSettings_ulum1")
 [node name="Area2D" type="Area2D" parent="Tutrial/Tutorial7"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tutrial/Tutorial7/Area2D"]
-position = Vector2(8, -69)
+position = Vector2(97, -69)
 scale = Vector2(1.0400001, 1)
 shape = SubResource("RectangleShape2D_mhjv0")
 
@@ -576,6 +579,8 @@ text = "collect pollen orbs to increase
 label_settings = SubResource("LabelSettings_ulum1")
 
 [node name="Area2D" type="Area2D" parent="Tutrial/Tutorial8"]
+position = Vector2(-14, 0)
+scale = Vector2(1.3336899, 0.92631173)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tutrial/Tutorial8/Area2D"]
 position = Vector2(105, -46.592285)
