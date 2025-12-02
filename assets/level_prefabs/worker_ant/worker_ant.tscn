@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bsk1bmbq5bf8x"]
 
 [ext_resource type="Texture2D" uid="uid://d24emgns8mtm2" path="res://assets/sprites/white.png" id="1_aewcx"]
-[ext_resource type="Script" uid="uid://dep7hj6hbdb8n" path="res://assets/worker_ant/worker_ant.gd" id="1_nchg6"]
+[ext_resource type="Script" uid="uid://dep7hj6hbdb8n" path="res://assets/level_prefabs/worker_ant/worker_ant.gd" id="1_nchg6"]
 [ext_resource type="PackedScene" uid="uid://4sf03s5f00cc" path="res://assets/level_prefabs/spike/killzone.tscn" id="2_5iji7"]
 [ext_resource type="FontFile" uid="uid://de2oe4cfumvi2" path="res://assets/fonts/monogram.ttf" id="4_axdij"]
 

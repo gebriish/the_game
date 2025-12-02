@@ -69,6 +69,12 @@ texture = ExtResource("2_v2miy")
 [node name="Eye1" type="Node2D" parent="Rotatable"]
 position = Vector2(-6, -17)
 
+[node name="bal2" type="Sprite2D" parent="Rotatable/Eye1"]
+modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)
+position = Vector2(16, -1.9073486e-06)
+scale = Vector2(0.44471338, 0.37884316)
+texture = ExtResource("2_v2miy")
+
 [node name="bal" type="Sprite2D" parent="Rotatable/Eye1"]
 modulate = Color(0.9844983, 0.960059, 0.9895049, 1)
 position = Vector2(16, -1.9073486e-06)
