@@ -1,13 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6v2auxiy7ca0"]
+[gd_scene load_steps=12 format=3 uid="uid://c6v2auxiy7ca0"]
 
 [ext_resource type="PackedScene" uid="uid://q1d7iycpesjo" path="res://assets/Prefab_kinda/controlPause.tscn" id="1_ybjcv"]
 [ext_resource type="PackedScene" uid="uid://dprho8jmoqejn" path="res://assets/player/player.tscn" id="2_ybjcv"]
 [ext_resource type="Texture2D" uid="uid://d24emgns8mtm2" path="res://assets/sprites/white.png" id="3_8xidb"]
 [ext_resource type="Script" uid="uid://dm6iobhc3btjl" path="res://assets/camera/camera_follow.gd" id="3_s6pog"]
 [ext_resource type="Texture2D" uid="uid://bvcne3n84m38f" path="res://assets/sprites/arrow.png" id="5_8xidb"]
+[ext_resource type="PackedScene" uid="uid://bk3mvo1ti5trv" path="res://assets/level_prefabs/spike.tscn" id="5_j7rnq"]
+[ext_resource type="FontFile" uid="uid://de2oe4cfumvi2" path="res://assets/fonts/monogram.ttf" id="6_mhjv0"]
+[ext_resource type="Script" uid="uid://bo5d28h7vwjfn" path="res://assets/tutorial/tut_dialog.gd" id="7_ulum1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ybjcv"]
 size = Vector2(32, 32)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ulum1"]
+font = ExtResource("6_mhjv0")
+font_size = 32
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mhjv0"]
+size = Vector2(395.26917, 222.5)
 
 [node name="Node2D" type="Node2D"]
 
@@ -24,6 +34,7 @@ script = ExtResource("3_s6pog")
 [node name="Level_Geom" type="Node2D" parent="."]
 
 [node name="Block2" type="Node2D" parent="Level_Geom"]
+z_index = 2
 position = Vector2(-715, 22.000002)
 scale = Vector2(26.567785, 39.787445)
 
@@ -37,6 +48,7 @@ texture = ExtResource("3_8xidb")
 shape = SubResource("RectangleShape2D_ybjcv")
 
 [node name="Block3" type="Node2D" parent="Level_Geom"]
+z_index = 2
 position = Vector2(713, -576)
 scale = Vector2(54.133057, 25.337639)
 
@@ -50,6 +62,7 @@ texture = ExtResource("3_8xidb")
 shape = SubResource("RectangleShape2D_ybjcv")
 
 [node name="Block7" type="Node2D" parent="Level_Geom"]
+z_index = 2
 position = Vector2(-279, -759)
 scale = Vector2(54.133057, 25.337639)
 
@@ -63,7 +76,8 @@ texture = ExtResource("3_8xidb")
 shape = SubResource("RectangleShape2D_ybjcv")
 
 [node name="Block4" type="Node2D" parent="Level_Geom"]
-position = Vector2(2181, 534.00006)
+z_index = 2
+position = Vector2(2102.0002, 534.00006)
 rotation = 1.5707964
 scale = Vector2(138.33307, 38.897644)
 
@@ -77,9 +91,10 @@ texture = ExtResource("3_8xidb")
 shape = SubResource("RectangleShape2D_ybjcv")
 
 [node name="Block5" type="Node2D" parent="Level_Geom"]
-position = Vector2(92, 1078)
+z_index = 2
+position = Vector2(263, 912.00006)
 rotation = 1.5707964
-scale = Vector2(54.133057, 80.33764)
+scale = Vector2(43.413055, 63.617638)
 
 [node name="Sprite2D" type="Sprite2D" parent="Level_Geom/Block5"]
 modulate = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
@@ -91,9 +106,10 @@ texture = ExtResource("3_8xidb")
 shape = SubResource("RectangleShape2D_ybjcv")
 
 [node name="Block6" type="Node2D" parent="Level_Geom"]
-position = Vector2(72, 3063)
+z_index = 2
+position = Vector2(1263, 2801.0002)
 rotation = 1.5707964
-scale = Vector2(54.133057, 80.33764)
+scale = Vector2(54.133057, 91.29764)
 
 [node name="Sprite2D" type="Sprite2D" parent="Level_Geom/Block6"]
 modulate = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
@@ -104,22 +120,9 @@ texture = ExtResource("3_8xidb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level_Geom/Block6/StaticBody2D"]
 shape = SubResource("RectangleShape2D_ybjcv")
 
-[node name="Block10" type="Node2D" parent="Level_Geom"]
-position = Vector2(2211, 3443)
-rotation = 1.5707964
-scale = Vector2(54.133057, 80.33764)
-
-[node name="Sprite2D" type="Sprite2D" parent="Level_Geom/Block10"]
-modulate = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
-texture = ExtResource("3_8xidb")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Level_Geom/Block10"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level_Geom/Block10/StaticBody2D"]
-shape = SubResource("RectangleShape2D_ybjcv")
-
 [node name="Block8" type="Node2D" parent="Level_Geom"]
-position = Vector2(453.99997, 269.00006)
+z_index = 2
+position = Vector2(454.00003, 278)
 rotation = 3.1415927
 scale = Vector2(-5.8866844, 6.8001623)
 
@@ -133,7 +136,8 @@ texture = ExtResource("3_8xidb")
 shape = SubResource("RectangleShape2D_ybjcv")
 
 [node name="Block9" type="Node2D" parent="Level_Geom"]
-position = Vector2(837, 274)
+z_index = 2
+position = Vector2(837.00006, 253)
 rotation = 3.1415927
 scale = Vector2(-5.8866844, 12.120162)
 
@@ -146,7 +150,192 @@ texture = ExtResource("3_8xidb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level_Geom/Block9/StaticBody2D"]
 shape = SubResource("RectangleShape2D_ybjcv")
 
-[node name="Arrow" type="Sprite2D" parent="Level_Geom"]
+[node name="Block10" type="Node2D" parent="Level_Geom"]
+z_index = 2
+position = Vector2(1177, 2093.9998)
+rotation = 3.1415927
+scale = Vector2(-3.3179042, 15.604986)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level_Geom/Block10"]
+modulate = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
+texture = ExtResource("3_8xidb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Level_Geom/Block10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level_Geom/Block10/StaticBody2D"]
+shape = SubResource("RectangleShape2D_ybjcv")
+
+[node name="Block11" type="Node2D" parent="Level_Geom"]
+z_index = 2
+position = Vector2(899, 2097.9998)
+rotation = 3.1415927
+scale = Vector2(-3.3979068, 15.604986)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level_Geom/Block11"]
+modulate = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
+texture = ExtResource("3_8xidb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Level_Geom/Block11"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level_Geom/Block11/StaticBody2D"]
+shape = SubResource("RectangleShape2D_ybjcv")
+
+[node name="Block12" type="Node2D" parent="Level_Geom"]
+z_index = 2
+position = Vector2(620.00006, 2096.9998)
+rotation = 3.1415927
+scale = Vector2(-3.3179042, 15.604986)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level_Geom/Block12"]
+modulate = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
+texture = ExtResource("3_8xidb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Level_Geom/Block12"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level_Geom/Block12/StaticBody2D"]
+shape = SubResource("RectangleShape2D_ybjcv")
+
+[node name="Spike" parent="Level_Geom" instance=ExtResource("5_j7rnq")]
+position = Vector2(1035, 1936)
+
+[node name="Spike2" parent="Level_Geom" instance=ExtResource("5_j7rnq")]
+position = Vector2(755, 1936)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Tutorial" type="Node2D" parent="Node2D"]
+position = Vector2(181, 184)
+script = ExtResource("7_ulum1")
+
+[node name="Label" type="Label" parent="Node2D/Tutorial"]
 texture_filter = 1
-position = Vector2(1461, 92)
+offset_left = -152.0
+offset_top = -178.0
+offset_right = 172.0
+offset_bottom = -123.0
+text = "tap [space] or [gamepad A]
+          to jump"
+label_settings = SubResource("LabelSettings_ulum1")
+
+[node name="Area2D" type="Area2D" parent="Node2D/Tutorial"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Tutorial/Area2D"]
+position = Vector2(8, -69)
+scale = Vector2(1.0400001, 1)
+shape = SubResource("RectangleShape2D_mhjv0")
+
+[node name="Tutorial2" type="Node2D" parent="Node2D"]
+position = Vector2(-138, 157)
+script = ExtResource("7_ulum1")
+
+[node name="Label" type="Label" parent="Node2D/Tutorial2"]
+texture_filter = 1
+offset_left = -133.0
+offset_top = -192.0
+offset_right = 69.0
+offset_bottom = -103.0
+text = "[keyboard arrow/A/D]
+   or [left stick]
+      to move"
+label_settings = SubResource("LabelSettings_ulum1")
+
+[node name="Area2D" type="Area2D" parent="Node2D/Tutorial2"]
+position = Vector2(-25, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Tutorial2/Area2D"]
+position = Vector2(8, -69)
+scale = Vector2(1.0400001, 1)
+shape = SubResource("RectangleShape2D_mhjv0")
+
+[node name="Tutorial3" type="Node2D" parent="Node2D"]
+position = Vector2(613, 184)
+script = ExtResource("7_ulum1")
+
+[node name="Label" type="Label" parent="Node2D/Tutorial3"]
+texture_filter = 1
+offset_left = -146.0
+offset_top = -178.0
+offset_right = 178.0
+offset_bottom = -123.0
+text = "long press for high jump!"
+label_settings = SubResource("LabelSettings_ulum1")
+
+[node name="Area2D" type="Area2D" parent="Node2D/Tutorial3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Tutorial3/Area2D"]
+position = Vector2(8, -69)
+scale = Vector2(1.0400001, 1)
+shape = SubResource("RectangleShape2D_mhjv0")
+
+[node name="Tutorial4" type="Node2D" parent="Node2D"]
+position = Vector2(1351, 203)
+script = ExtResource("7_ulum1")
+
+[node name="Label" type="Label" parent="Node2D/Tutorial4"]
+texture_filter = 1
+offset_left = -197.0
+offset_top = -172.0
+offset_right = 127.0
+offset_bottom = -117.0
+text = "Jump and attach to the wall
+        to wallslide"
+label_settings = SubResource("LabelSettings_ulum1")
+
+[node name="Arrow" type="Sprite2D" parent="Node2D/Tutorial4/Label"]
+texture_filter = 1
+position = Vector2(261, 86)
 texture = ExtResource("5_8xidb")
+
+[node name="Area2D" type="Area2D" parent="Node2D/Tutorial4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Tutorial4/Area2D"]
+position = Vector2(-26.45996, -71.25)
+scale = Vector2(1.0400001, 1)
+shape = SubResource("RectangleShape2D_mhjv0")
+
+[node name="Tutorial5" type="Node2D" parent="Node2D"]
+position = Vector2(1499, 768)
+script = ExtResource("7_ulum1")
+
+[node name="Label" type="Label" parent="Node2D/Tutorial5"]
+texture_filter = 1
+offset_left = -213.0
+offset_top = 71.0
+offset_right = 111.0
+offset_bottom = 184.0
+text = " Arrows + Jump 
+
+
+to switch sides"
+label_settings = SubResource("LabelSettings_ulum1")
+
+[node name="Area2D" type="Area2D" parent="Node2D/Tutorial5"]
+position = Vector2(14, 490)
+scale = Vector2(1, 4.559999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Tutorial5/Area2D"]
+position = Vector2(-111, -73.245636)
+scale = Vector2(1.0400001, 1)
+shape = SubResource("RectangleShape2D_mhjv0")
+
+[node name="Tutorial6" type="Node2D" parent="Node2D"]
+position = Vector2(1126, 1678)
+script = ExtResource("7_ulum1")
+
+[node name="Label" type="Label" parent="Node2D/Tutorial6"]
+texture_filter = 1
+offset_left = -76.0
+offset_top = 1.0
+offset_right = 32.0
+offset_bottom = 28.0
+text = "look out!"
+label_settings = SubResource("LabelSettings_ulum1")
+
+[node name="Area2D" type="Area2D" parent="Node2D/Tutorial6"]
+position = Vector2(49.999996, 490)
+scale = Vector2(1.8400049, 4.559999)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Tutorial6/Area2D"]
+position = Vector2(-39, -95.83334)
+scale = Vector2(0.10290578, 0.5025772)
+shape = SubResource("RectangleShape2D_mhjv0")

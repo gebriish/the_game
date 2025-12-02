@@ -28,6 +28,10 @@ const WALL_COYOTE_TIME = 0.11
 @onready var eye1 = $Rotatable/Eye1
 @onready var eye2 = $Rotatable/Eye2
 @onready var cape = $Rotatable/Cape
+@onready var audio = $AudioPlayer
+
+var jump_audio_stream = preload("res://assets/audio/jump.wav")
+var wall_jump_audio_stream = preload("res://assets/audio/wall_jump.wav")
 
 var vel := Vector2.ZERO
 var axis := Vector2.ZERO
@@ -195,10 +199,15 @@ func horizontal_movement(delta):
 		vel.x = lerp(vel.x, 0.0, 0.08)
 
 func do_jump():
+	audio.stream = jump_audio_stream
+	audio.play()
 	vel.y = JUMP_VELOCITY
 	can_jump = false
 
 func do_wall_jump():
+	audio.stream = wall_jump_audio_stream
+	audio.play()
+	
 	var d = int(sign(axis.x))
 	var p = WALL_JUMP_PUSH
 
