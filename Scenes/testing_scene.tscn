@@ -1,5 +1,6 @@
-[gd_scene load_steps=27 format=3 uid="uid://c6v2auxiy7ca0"]
+[gd_scene load_steps=28 format=3 uid="uid://c6v2auxiy7ca0"]
 
+[ext_resource type="PackedScene" uid="uid://bsktspv78ug47" path="res://assets/Particles/Jump.tscn" id="1_dvjuv"]
 [ext_resource type="PackedScene" uid="uid://q1d7iycpesjo" path="res://assets/Prefab_kinda/Pause_Menu/controlPause.tscn" id="1_ybjcv"]
 [ext_resource type="PackedScene" uid="uid://dprho8jmoqejn" path="res://assets/player/player.tscn" id="2_ybjcv"]
 [ext_resource type="Texture2D" uid="uid://d24emgns8mtm2" path="res://assets/sprites/white.png" id="3_8xidb"]
@@ -39,6 +40,8 @@ ambient_light_source = 1
 
 [node name="Node2D" type="Node2D"]
 
+[node name="Jump" parent="." instance=ExtResource("1_dvjuv")]
+
 [node name="Spawn" type="Node2D" parent="."]
 position = Vector2(-233, -283)
 
@@ -46,8 +49,9 @@ position = Vector2(-233, -283)
 
 [node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("1_ybjcv")]
 
-[node name="Player" parent="." instance=ExtResource("2_ybjcv")]
+[node name="Player" parent="." node_paths=PackedStringArray("Particle_fx") instance=ExtResource("2_ybjcv")]
 position = Vector2(-160, -255)
+Particle_fx = NodePath("../Jump")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 process_mode = 3

@@ -265,8 +265,25 @@ func horizontal_movement(delta):
 	if airborne_friction:
 		vel.x = lerp(vel.x, 0.0, 0.08)
 
+@export var feet:Node2D
+@export var side:Node2D
+@export var Particle_fx:Node2D
+
+func instantiate_jump_particles():
+	var Position = feet.global_position
+	print(Position)
+	Particle_fx.global_position = Position
+	Particle_fx.play_particle()
+
+func instantiate_Walljump_particles():
+	var Position = side.global_position
+	print(Position)
+	Particle_fx.global_position = Position
+	Particle_fx.play_particle()
+
 func do_jump():
 	play_sfx(jump_audio_stream)
+	instantiate_jump_particles()
 	vel.y = JUMP_VELOCITY
 	can_jump = false
 	glide_delay = glide_delay_time
@@ -282,6 +299,7 @@ func do_wall_jump():
 	stamina_recharge_delay = stamina_recharge_cooldown
 	stamina = max(stamina, 0.0)
 
+	instantiate_Walljump_particles()
 	play_sfx(wall_jump_audio_stream)
 
 	var d = int(sign(axis.x))

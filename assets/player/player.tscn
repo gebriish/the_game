@@ -8,8 +8,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7tmfp"]
 size = Vector2(32, 56)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("feet", "side")]
 script = ExtResource("1_h6syq")
+feet = NodePath("Rotatable/feet")
+side = NodePath("Rotatable/side")
 
 [node name="BoundingBox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7tmfp")
@@ -89,6 +91,13 @@ modulate = Color(0.9844983, 0.960059, 0.9895049, 1)
 position = Vector2(-15.999999, -1.9073486e-06)
 scale = Vector2(0.3284411, 0.27979296)
 texture = ExtResource("2_v2miy")
+
+[node name="feet" type="Node2D" parent="Rotatable"]
+position = Vector2(0, 27)
+
+[node name="side" type="Node2D" parent="Rotatable"]
+position = Vector2(16, 26)
+rotation = -1.5707964
 
 [node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_v2miy")
