@@ -38,7 +38,7 @@ position = Vector2(-233, -283)
 [node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("1_ybjcv")]
 
 [node name="Player" parent="." instance=ExtResource("2_ybjcv")]
-position = Vector2(-1653, 285)
+position = Vector2(-163, -243)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 process_mode = 3
@@ -877,7 +877,7 @@ position = Vector2(-2664, 67.99999)
 rotation = 4.7187915
 
 [node name="Spike28" parent="Level_Geom" instance=ExtResource("5_j7rnq")]
-position = Vector2(-824, 668.0001)
+position = Vector2(-817.00006, 664)
 rotation = 3.2873635
 
 [node name="Spike8" parent="Level_Geom" instance=ExtResource("5_j7rnq")]
@@ -2610,6 +2610,76 @@ rotation = -3.1257398
 scale = Vector2(1.2502836, 1.15)
 texture = ExtResource("13_880tf")
 
+[node name="Ground243" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-3954.9998, 1487.9999)
+rotation = -3.143687
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground247" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-4284, 1404)
+rotation = -3.1681159
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground248" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-4226, 1462)
+rotation = -1.5260359
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground249" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-4345.0005, 1465)
+rotation = -1.6048203
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground250" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-4283, 1798)
+rotation = -0.026871786
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground251" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-4340, 1734.9999)
+rotation = 1.6078857
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground252" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-4223, 1733)
+rotation = 1.505688
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground244" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-3888.9998, 1548.9999)
+rotation = -1.5967953
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground245" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-3953.0005, 1609)
+rotation = 0.028658599
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground246" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-4016.0002, 1552.0001)
+rotation = 1.6024646
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
 [node name="Ground174" type="Sprite2D" parent="Node2D"]
 z_index = 3
 position = Vector2(-3537, 923)
@@ -2687,6 +2757,20 @@ rotation = 1.5284634
 scale = Vector2(1.2502836, 1.15)
 texture = ExtResource("13_880tf")
 
+[node name="Ground241" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-2632, 1146)
+rotation = 3.0879285
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground242" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-2372, 1144)
+rotation = 3.231994
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
 [node name="Ground185" type="Sprite2D" parent="Node2D"]
 z_index = 3
 position = Vector2(-2436.1445, 1067.5)
@@ -2734,6 +2818,62 @@ z_index = 3
 position = Vector2(-1003.00006, 659.0001)
 rotation = 3.0483637
 scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground233" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-1036.0001, 838.99994)
+rotation = 3.16116
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground234" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-880, 838)
+rotation = 3.118092
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground235" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-876.99994, 933.00006)
+rotation = 3.118092
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground239" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-682.99994, 1067)
+rotation = 4.7121544
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground240" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-747.99994, 1143)
+rotation = 6.177634
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground236" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-1039, 936.00006)
+rotation = 3.118092
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground237" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-1094.0001, 883)
+rotation = 4.7067776
+scale = Vector2(0.9066204, 1.2921711)
+texture = ExtResource("13_880tf")
+
+[node name="Ground238" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-822, 879.99994)
+rotation = 4.7112284
+scale = Vector2(0.9066204, 1.2921711)
 texture = ExtResource("13_880tf")
 
 [node name="Ground190" type="Sprite2D" parent="Node2D"]

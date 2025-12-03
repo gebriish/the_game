@@ -36,7 +36,7 @@ texture = ExtResource("1_aewcx")
 [node name="Butt" type="Sprite2D" parent="GFX"]
 modulate = Color(0.8039376, 0.40465075, 0.21681377, 1)
 position = Vector2(-30.999996, 1.7881393e-07)
-rotation = 0.10016074
+rotation = 0.081748
 scale = Vector2(1.1537454, 1.1537454)
 texture = ExtResource("1_aewcx")
 
@@ -96,4 +96,5 @@ text = "!"
 label_settings = SubResource("LabelSettings_5peaj")
 
 [node name="Killzone" parent="." instance=ExtResource("2_5iji7")]
-scale = Vector2(0.5020332, 1.6238741)
+position = Vector2(-2, 0.99999994)
+scale = Vector2(0.5923586, 1.6848073)
