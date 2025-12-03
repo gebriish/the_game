@@ -33,7 +33,7 @@ position = Vector2(-233, -283)
 [node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("1_ybjcv")]
 
 [node name="Player" parent="." instance=ExtResource("2_ybjcv")]
-position = Vector2(-1675, 916)
+position = Vector2(-3501, 1775)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 process_mode = 3
@@ -73,7 +73,7 @@ shape = SubResource("RectangleShape2D_ybjcv")
 
 [node name="Block7" type="Node2D" parent="Level_Geom"]
 z_index = 2
-position = Vector2(-279, -759)
+position = Vector2(-276, -759)
 scale = Vector2(54.133057, 25.337639)
 
 [node name="Sprite2D" type="Sprite2D" parent="Level_Geom/Block7"]
@@ -83,6 +83,20 @@ texture = ExtResource("3_8xidb")
 [node name="StaticBody2D" type="StaticBody2D" parent="Level_Geom/Block7"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level_Geom/Block7/StaticBody2D"]
+shape = SubResource("RectangleShape2D_ybjcv")
+
+[node name="Block50" type="Node2D" parent="Level_Geom"]
+z_index = 2
+position = Vector2(-1103.9999, -507.99997)
+scale = Vector2(3.7091641, 38.083992)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level_Geom/Block50"]
+modulate = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
+texture = ExtResource("3_8xidb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Level_Geom/Block50"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level_Geom/Block50/StaticBody2D"]
 shape = SubResource("RectangleShape2D_ybjcv")
 
 [node name="Block4" type="Node2D" parent="Level_Geom"]
@@ -252,7 +266,7 @@ shape = SubResource("RectangleShape2D_ybjcv")
 
 [node name="Block34" type="Node2D" parent="Level_Geom"]
 z_index = 2
-position = Vector2(-4424, 2168.0002)
+position = Vector2(-4357, 2051.0002)
 rotation = 4.712389
 scale = Vector2(4.640562, 13.212645)
 
@@ -505,6 +519,21 @@ texture = ExtResource("3_8xidb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level_Geom/Block51/StaticBody2D"]
 shape = SubResource("RectangleShape2D_ybjcv")
 
+[node name="Block52" type="Node2D" parent="Level_Geom"]
+z_index = 2
+position = Vector2(-1373, -458)
+rotation = 7.853982
+scale = Vector2(19.874216, 3.9076223)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level_Geom/Block52"]
+modulate = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
+texture = ExtResource("3_8xidb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Level_Geom/Block52"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level_Geom/Block52/StaticBody2D"]
+shape = SubResource("RectangleShape2D_ybjcv")
+
 [node name="Block33" type="Node2D" parent="Level_Geom"]
 z_index = 2
 position = Vector2(-3176, 1886.0001)
@@ -582,7 +611,7 @@ shape = SubResource("RectangleShape2D_ybjcv")
 
 [node name="Block19" type="Node2D" parent="Level_Geom"]
 z_index = 2
-position = Vector2(-5503, -923)
+position = Vector2(-3742, -978.00006)
 rotation = 3.1415927
 scale = Vector2(35.183083, 25.842215)
 
@@ -808,6 +837,10 @@ rotation = 3.1415927
 position = Vector2(-1697.9999, 435.00003)
 rotation = 4.745162
 
+[node name="Spike33" parent="Level_Geom" instance=ExtResource("5_j7rnq")]
+position = Vector2(-2664, 67.99999)
+rotation = 4.7187915
+
 [node name="Spike28" parent="Level_Geom" instance=ExtResource("5_j7rnq")]
 position = Vector2(-824, 668.0001)
 rotation = 3.2873635
@@ -895,8 +928,17 @@ position = Vector2(-2771, 2336)
 [node name="Falling_Block2" parent="Level_Geom" instance=ExtResource("6_p34cg")]
 position = Vector2(-1440, 343)
 
+[node name="Falling_Block4" parent="Level_Geom" instance=ExtResource("6_p34cg")]
+position = Vector2(-1773, -734)
+
+[node name="Falling_Block5" parent="Level_Geom" instance=ExtResource("6_p34cg")]
+position = Vector2(-2279, -674)
+
 [node name="Falling_Block3" parent="Level_Geom" instance=ExtResource("6_p34cg")]
 position = Vector2(-3229, 2336)
+
+[node name="Falling_Block6" parent="Level_Geom" instance=ExtResource("6_p34cg")]
+position = Vector2(-3948, 1927)
 
 [node name="Worker_Ant" parent="Level_Geom" instance=ExtResource("6_lv8lt")]
 position = Vector2(123, 1901)
@@ -921,6 +963,12 @@ position = Vector2(-2806, 1073)
 
 [node name="Worker_Ant6" parent="Level_Geom" instance=ExtResource("6_lv8lt")]
 position = Vector2(-1940, 1078)
+
+[node name="Worker_Ant11" parent="Level_Geom" instance=ExtResource("6_lv8lt")]
+position = Vector2(-1974, 336)
+
+[node name="Worker_Ant12" parent="Level_Geom" instance=ExtResource("6_lv8lt")]
+position = Vector2(-2524, 330)
 
 [node name="Worker_Ant7" parent="Level_Geom" instance=ExtResource("6_lv8lt")]
 position = Vector2(-1594, 1077)
@@ -1174,6 +1222,21 @@ position = Vector2(-3036, 1013)
 [node name="Pollen20" parent="." instance=ExtResource("11_dyvnm")]
 position = Vector2(-2108, 1082)
 
+[node name="Pollen26" parent="." instance=ExtResource("11_dyvnm")]
+position = Vector2(-2177, 314)
+
+[node name="Pollen31" parent="." instance=ExtResource("11_dyvnm")]
+position = Vector2(-2553, 1892)
+
+[node name="Pollen32" parent="." instance=ExtResource("11_dyvnm")]
+position = Vector2(-2707, 2286)
+
+[node name="Pollen33" parent="." instance=ExtResource("11_dyvnm")]
+position = Vector2(-3167, 2280)
+
+[node name="Pollen30" parent="." instance=ExtResource("11_dyvnm")]
+position = Vector2(-1690, -10)
+
 [node name="Pollen21" parent="." instance=ExtResource("11_dyvnm")]
 position = Vector2(-718, 1010)
 
@@ -1185,6 +1248,18 @@ position = Vector2(-908, 785)
 
 [node name="Pollen24" parent="." instance=ExtResource("11_dyvnm")]
 position = Vector2(-1140, 366)
+
+[node name="Pollen25" parent="." instance=ExtResource("11_dyvnm")]
+position = Vector2(-2364, 92)
+
+[node name="Pollen27" parent="." instance=ExtResource("11_dyvnm")]
+position = Vector2(-2034, -11)
+
+[node name="Pollen28" parent="." instance=ExtResource("11_dyvnm")]
+position = Vector2(-1309, -15)
+
+[node name="Pollen29" parent="." instance=ExtResource("11_dyvnm")]
+position = Vector2(-1316, -794)
 
 [node name="Pollen12" parent="." instance=ExtResource("11_dyvnm")]
 position = Vector2(-4474, 1534)
@@ -1209,25 +1284,6 @@ position = Vector2(-1705, 251)
 
 [node name="Checkpoint_1" parent="." instance=ExtResource("10_66ky8")]
 position = Vector2(1241, 1778)
-
-[node name="Label" type="Label" parent="."]
-offset_left = -4847.0
-offset_top = -792.99994
-offset_right = -4728.0
-offset_bottom = -769.99994
-scale = Vector2(6.1968765, 6.1968765)
-text = "Level End point"
-
-[node name="Label8" type="Label" parent="."]
-z_index = 3
-offset_left = -4042.0
-offset_top = -389.0
-offset_right = -3842.0
-offset_bottom = -340.0
-rotation = 1.5707964
-scale = Vector2(6.1968765, 6.1968765)
-text = "Lets keep this 
-area for some easter eggs"
 
 [node name="Label4" type="Label" parent="."]
 z_index = 3
