@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctrl7ma3y2b0k"]
+
+[ext_resource type="Script" uid="uid://chavbqybxj3h4" path="res://assets/level_prefabs/pollen/pollen.gd" id="1_04gla"]
+[ext_resource type="Texture2D" uid="uid://d24emgns8mtm2" path="res://assets/sprites/white.png" id="1_phhlh"]
+[ext_resource type="AudioStream" uid="uid://de4twdf68a0m5" path="res://assets/audio/collect.wav" id="3_yoq1i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_04gla"]
+
+[node name="Pollen" type="Node2D"]
+script = ExtResource("1_04gla")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.9098039, 0.6666667, 0.1882353, 1)
+scale = Vector2(0.5104649, 0.5104649)
+texture = ExtResource("1_phhlh")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_04gla")
+
+[node name="CollectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_yoq1i")
+pitch_scale = 1.75

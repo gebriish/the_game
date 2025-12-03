@@ -91,7 +91,7 @@ var stamina_recharge_cooldown = 0.56
 
 var glide_stamina_drain := 8.0
 var wall_jump_stamina_cost := 12.0
-var stamina_recovery_rate := 10.0
+var stamina_recovery_rate := 4.0
 
 var current_spawn: Vector2
 var was_on_floor = false
@@ -270,6 +270,8 @@ func do_jump():
 	vel.y = JUMP_VELOCITY
 	can_jump = false
 	glide_delay = glide_delay_time
+	
+	
 
 func do_wall_jump():
 	if stamina <= 0.0:

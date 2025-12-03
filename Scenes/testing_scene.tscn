@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c6v2auxiy7ca0"]
+[gd_scene load_steps=16 format=3 uid="uid://c6v2auxiy7ca0"]
 
 [ext_resource type="PackedScene" uid="uid://q1d7iycpesjo" path="res://assets/Prefab_kinda/Pause_Menu/controlPause.tscn" id="1_ybjcv"]
 [ext_resource type="PackedScene" uid="uid://dprho8jmoqejn" path="res://assets/player/player.tscn" id="2_ybjcv"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cu1nlk2ttt3x" path="res://assets/level_prefabs/falling_block/falling_block.tscn" id="6_p34cg"]
 [ext_resource type="Script" uid="uid://bo5d28h7vwjfn" path="res://assets/tutorial/tut_dialog.gd" id="7_ulum1"]
 [ext_resource type="PackedScene" uid="uid://cvku1me4whylh" path="res://assets/level_prefabs/Checkpoint/checkpoint.tscn" id="10_66ky8"]
+[ext_resource type="PackedScene" uid="uid://ctrl7ma3y2b0k" path="res://assets/level_prefabs/pollen/pollen.tscn" id="11_dyvnm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ybjcv"]
 size = Vector2(32, 32)
@@ -116,9 +117,9 @@ shape = SubResource("RectangleShape2D_ybjcv")
 
 [node name="Block15" type="Node2D" parent="Level_Geom"]
 z_index = 2
-position = Vector2(-2081.0002, -772.99994)
+position = Vector2(-1986.9998, -1654)
 rotation = 1.5707964
-scale = Vector2(43.413055, 63.617638)
+scale = Vector2(43.413055, 80.73764)
 
 [node name="Sprite2D" type="Sprite2D" parent="Level_Geom/Block15"]
 modulate = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
@@ -206,9 +207,9 @@ shape = SubResource("RectangleShape2D_ybjcv")
 
 [node name="Block21" type="Node2D" parent="Level_Geom"]
 z_index = 2
-position = Vector2(-3312, -97)
+position = Vector2(-3225, 18)
 rotation = 1.5707964
-scale = Vector2(60.413784, 22.003891)
+scale = Vector2(40.47154, -35.32655)
 
 [node name="Sprite2D" type="Sprite2D" parent="Level_Geom/Block21"]
 modulate = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
@@ -217,6 +218,21 @@ texture = ExtResource("3_8xidb")
 [node name="StaticBody2D" type="StaticBody2D" parent="Level_Geom/Block21"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level_Geom/Block21/StaticBody2D"]
+shape = SubResource("RectangleShape2D_ybjcv")
+
+[node name="Block28" type="Node2D" parent="Level_Geom"]
+z_index = 2
+position = Vector2(-4479, -571.99994)
+rotation = 1.5707964
+scale = Vector2(4.2513757, -114.19539)
+
+[node name="Sprite2D" type="Sprite2D" parent="Level_Geom/Block28"]
+modulate = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
+texture = ExtResource("3_8xidb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Level_Geom/Block28"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level_Geom/Block28/StaticBody2D"]
 shape = SubResource("RectangleShape2D_ybjcv")
 
 [node name="Block17" type="Node2D" parent="Level_Geom"]
@@ -444,6 +460,22 @@ rotation = 1.5987729
 position = Vector2(-1715.0001, 1529.0001)
 rotation = 1.5987729
 
+[node name="Spike6" parent="Level_Geom" instance=ExtResource("5_j7rnq")]
+position = Vector2(-2357, 2040)
+rotation = 1.559981
+
+[node name="Spike7" parent="Level_Geom" instance=ExtResource("5_j7rnq")]
+position = Vector2(-2689.9998, 2047)
+rotation = 1.559981
+
+[node name="Spike21" parent="Level_Geom" instance=ExtResource("5_j7rnq")]
+position = Vector2(-1065, 1650)
+rotation = 1.5987729
+
+[node name="Spike22" parent="Level_Geom" instance=ExtResource("5_j7rnq")]
+position = Vector2(-1420, 1684)
+rotation = 3.146572
+
 [node name="Spike9" parent="Level_Geom" instance=ExtResource("5_j7rnq")]
 position = Vector2(-2632, 2474)
 
@@ -478,19 +510,7 @@ position = Vector2(-4160, 2473)
 position = Vector2(-4330, 2473)
 
 [node name="Spike20" parent="Level_Geom" instance=ExtResource("5_j7rnq")]
-position = Vector2(-4503, 2473)
-
-[node name="Spike6" parent="Level_Geom" instance=ExtResource("5_j7rnq")]
-position = Vector2(-1069.9999, 2224)
-rotation = 1.5987729
-
-[node name="Spike7" parent="Level_Geom" instance=ExtResource("5_j7rnq")]
-position = Vector2(-1073.0001, 2398)
-rotation = 1.5995115
-
-[node name="Spike8" parent="Level_Geom" instance=ExtResource("5_j7rnq")]
-position = Vector2(-1171, 2479.0002)
-rotation = 3.1159163
+position = Vector2(-4535, 2455)
 
 [node name="Falling_Block" parent="Level_Geom" instance=ExtResource("6_p34cg")]
 position = Vector2(-2771, 2336)
@@ -689,13 +709,8 @@ position = Vector2(-39, -95.83334)
 scale = Vector2(0.10290578, 0.5025772)
 shape = SubResource("RectangleShape2D_mhjv0")
 
-[node name="Pollen" type="Node2D" parent="."]
+[node name="Pollen" parent="." instance=ExtResource("11_dyvnm")]
 position = Vector2(-995, 1509)
-
-[node name="Sprite2D" type="Sprite2D" parent="Pollen"]
-modulate = Color(0.9098039, 0.6666667, 0.1882353, 1)
-scale = Vector2(0.6042243, 0.6042243)
-texture = ExtResource("3_8xidb")
 
 [node name="Checkpoint_2" parent="." instance=ExtResource("10_66ky8")]
 position = Vector2(-55, 1778)
@@ -726,16 +741,51 @@ offset_bottom = 2115.142
 scale = Vector2(6.1968765, 6.1968765)
 text = "Falling platforms"
 
+[node name="Label6" type="Label" parent="."]
+z_index = 3
+offset_left = -1897.0
+offset_top = 1967.9999
+offset_right = -1766.0
+offset_bottom = 2016.9999
+rotation = -0.0066854293
+scale = Vector2(6.1968765, 6.1968765)
+text = "Some sequence 
+here"
+
+[node name="Label7" type="Label" parent="."]
+z_index = 3
+offset_left = -2603.0
+offset_top = -221.00002
+offset_right = -2344.0
+offset_bottom = -120.000015
+rotation = -0.0066854293
+scale = Vector2(6.1968765, 6.1968765)
+text = "Ants + Wall Climb + Parkour 
+sequence
+
+need to add blocks and platforms"
+
 [node name="Label5" type="Label" parent="."]
 z_index = 3
-offset_left = -4378.0
-offset_top = 730.00006
-offset_right = -4247.0
-offset_bottom = 779.00006
+offset_left = -4445.0005
+offset_top = 779.00006
+offset_right = -4314.0005
+offset_bottom = 828.00006
 rotation = 0.004031876
 scale = Vector2(6.1968765, 6.1968765)
 text = "Some climbing 
 related part"
+
+[node name="Label8" type="Label" parent="."]
+z_index = 3
+offset_left = -4433.0
+offset_top = -217.99988
+offset_right = -4302.0
+offset_bottom = -168.99988
+rotation = 0.004031876
+scale = Vector2(6.1968765, 6.1968765)
+text = "Lets keep this 
+area for some easter eggs"
 
 [node name="Label4" type="Label" parent="."]
 z_index = 3
