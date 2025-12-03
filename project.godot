@@ -14,6 +14,10 @@ config/name="New Game Project"
 run/main_scene="uid://2yvq6yiiep7y"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
+[autoload]
+
+GameEvents="*res://GameEvents.gd"
+
 [display]
 
 window/size/viewport_width=640

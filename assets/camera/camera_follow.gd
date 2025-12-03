@@ -1,6 +1,6 @@
 extends Camera2D
 
-@export var deadzone_size := Vector2(200, 140)
+@export var deadzone_size := Vector2(200, 80)
 @export var camera_lerp_speed := 4.0
 
 @export var look_ahead_distance := Vector2(120, 80)

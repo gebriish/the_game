@@ -10,9 +10,13 @@ var shake_timer := 0.0
 var original_pos := Vector2.ZERO
 var fall_speed := 0.0
 
-func _ready() -> void:
+func _ready():
 	original_pos = position
+	GameEvents.player_died.connect(_on_player_died)
 	$Player_Check.body_entered.connect(_on_player_check_body_entered)
+
+func _on_player_died():
+	reset_platform()
 
 func _physics_process(delta: float) -> void:
 	if shaking:
@@ -34,7 +38,29 @@ func _physics_process(delta: float) -> void:
 			despawn()
 
 func despawn() -> void:
-	queue_free()
+	visible = false
+	falling = false
+	shaking = false
+	shake_timer = 0.0
+	fall_speed = 0.0
+	$CollisionShape2D.disabled = true
+	velocity = Vector2.ZERO
+	set_physics_process(false)
+
+func reset_platform():
+	position = original_pos
+	visible = true
+	falling = false
+	shaking = false
+	shake_timer = 0.0
+	fall_speed = 0.0
+	velocity = Vector2.ZERO
+	set_physics_process(true)
+
+	await get_tree().process_frame
+	$CollisionShape2D.disabled = false
+
+
 
 func _on_player_check_body_entered(body) -> void:
 	if body.name == "Player" and not shaking and not falling:

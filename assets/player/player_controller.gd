@@ -429,7 +429,11 @@ func distance_to_spawn():
 
 func die():
 	$".".global_position = current_spawn
-	var time : float
+	stamina = max_stamina
+
+	GameEvents.player_died.emit()
+
+	var time := 0.2
 	if distance_to_spawn() > 15:
 		get_tree().paused = true
 		await get_tree().create_timer(time).timeout
