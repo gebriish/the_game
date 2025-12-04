@@ -7,7 +7,7 @@ func _ready() -> void:
 	start.grab_focus()
 
 func _on_start_button_down() -> void:
-	get_tree().change_scene_to_file("res://Scenes/testing_scene.tscn")
+	get_tree().change_scene_to_file("res://Scenes/level1.tscn")
 
 func _on_quit_button_down() -> void:
 	get_tree().quit()
