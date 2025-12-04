@@ -49,7 +49,7 @@ position = Vector2(-233, -283)
 [node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("1_ybjcv")]
 
 [node name="Player" parent="." node_paths=PackedStringArray("Particle_fx") instance=ExtResource("2_ybjcv")]
-position = Vector2(-1959, -572)
+position = Vector2(-156, -253)
 Particle_fx = NodePath("../Jump")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -4521,8 +4521,8 @@ rotation = -0.08275591
 texture = ExtResource("21_fxw2b")
 
 [node name="Node2D11" type="Node2D" parent="Parallax2D2"]
-position = Vector2(-3427, -351.00003)
-rotation = 0.052043166
+position = Vector2(-4544, 17.999992)
+rotation = 0.010707013
 scale = Vector2(0.33345476, 0.33345476)
 
 [node name="Branch2" type="Sprite2D" parent="Parallax2D2/Node2D11"]
@@ -4582,6 +4582,34 @@ texture = ExtResource("21_fxw2b")
 modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
 position = Vector2(8960.659, -2327.243)
 rotation = -0.08275591
+texture = ExtResource("21_fxw2b")
+
+[node name="Node2D12" type="Node2D" parent="Parallax2D2"]
+position = Vector2(-1405.0002, -790.99994)
+rotation = -0.25934488
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D2/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("21_fxw2b")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D2/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("21_fxw2b")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D2/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("21_fxw2b")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D2/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
 texture = ExtResource("21_fxw2b")
 
 [node name="Node2D9" type="Node2D" parent="Parallax2D2"]
