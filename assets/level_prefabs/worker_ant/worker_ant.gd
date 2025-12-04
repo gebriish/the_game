@@ -120,24 +120,69 @@ func _physics_process(delta: float) -> void:
 			stuck_timer = 0.0
 	
 	last_position = global_position
+func _ray_hits_player_or_near_target(from_pos: Vector2, to_pos: Vector2, player: Node2D, los_mask: int) -> bool:
+	var params := PhysicsRayQueryParameters2D.new()
+	params.from = from_pos
+	params.to = to_pos
+	params.collide_with_areas = false
+	params.collision_mask = los_mask
+	params.exclude = [self]
 
+	var hit = get_world_2d().direct_space_state.intersect_ray(params)
+
+	# If ray hit nothing → clear line
+	if hit.is_empty():
+		return true
+
+	# If ray hit player directly → clear line
+	if hit.get("collider") == player:
+		return true
+
+	# Grazing-tolerance check (handle tiny tile edges)
+	var hit_pos: Vector2 = hit.get("position", Vector2.ZERO)
+	if hit_pos.distance_to(to_pos) <= 6.0:
+		return true
+
+	return false
 func state_patrol(delta: float) -> void:
 	if player != null:
-		var to_player = player.global_position - global_position
-		var aligned_y = abs(to_player.y) < vertical_vision_tolerance
+		var to_player: Vector2 = player.global_position - global_position
+		var aligned_y: bool = abs(to_player.y) < vertical_vision_tolerance
+		var dist: float = to_player.length()
 
-		# Check if player is in range regardless of facing direction
-		if aligned_y and to_player.length() < sight_distance:
-			# Update direction to face the player
-			direction = sign(to_player.x)
-			state = STATE_SPOT
-			spot_timer = spot_time																																															
-			velocity.x = 0.0
-			show_exclaim()
-			return
+		if aligned_y and dist < sight_distance:
 
+			# HEAD origin if available
+			var from_head: Vector2 = global_position
+			if has_node("GFX/Head"):
+				from_head = $GFX/Head.global_position
 
+			var from_body: Vector2 = global_position
+			var target_center: Vector2 = player.global_position
+			var target_feet: Vector2 = target_center + Vector2(0, 12.0)
+
+			var saw_player := false
+
+			# Multiple rays to improve accuracy
+			if _ray_hits_player_or_near_target(from_head, target_center, player, los_mask):
+				saw_player = true
+			elif _ray_hits_player_or_near_target(from_head, target_feet, player, los_mask):
+				saw_player = true
+			elif _ray_hits_player_or_near_target(from_body, target_center, player, los_mask):
+				saw_player = true
+
+			if saw_player:
+				direction = sign(to_player.x)
+				state = STATE_SPOT
+				spot_timer = spot_time
+				velocity.x = 0.0
+				show_exclaim()
+				return
+
+	# Normal patrol movement
 	velocity.x = lerp(velocity.x, direction * patrol_speed, 6.0 * delta)
+# ------------------------------------------------------------
+
 
 func state_spot(delta: float) -> void:
 	velocity.x = lerp(velocity.x, 0.0, 12.0 * delta)
