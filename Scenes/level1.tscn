@@ -1428,8 +1428,8 @@ texture = ExtResource("13_880tf")
 
 [node name="Ground12" type="Sprite2D" parent="Node2D"]
 z_index = 3
-position = Vector2(947, 108)
-rotation = -0.022858975
+position = Vector2(946.99994, 109.99999)
+rotation = -0.08266622
 scale = Vector2(1.009434, 1.15)
 texture = ExtResource("13_880tf")
 
@@ -2459,6 +2459,34 @@ texture = ExtResource("13_880tf")
 z_index = 3
 position = Vector2(-1830.0001, 412.00003)
 rotation = 3.0822785
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground293" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-2533, 414.99994)
+rotation = 3.2109265
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground295" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-2494.0002, 536.00006)
+rotation = 3.076605
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground296" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-2527.0002, 581)
+rotation = 1.6392965
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("13_880tf")
+
+[node name="Ground294" type="Sprite2D" parent="Node2D"]
+z_index = 3
+position = Vector2(-2615.9998, 351.99997)
+rotation = 4.6638064
 scale = Vector2(1.2502836, 1.15)
 texture = ExtResource("13_880tf")
 

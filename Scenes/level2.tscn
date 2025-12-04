@@ -1,0 +1,120 @@
+[gd_scene load_steps=11 format=3 uid="uid://bkn5q7tc1ifuj"]
+
+[ext_resource type="PackedScene" uid="uid://bsktspv78ug47" path="res://assets/Particles/Jump.tscn" id="1_5qi50"]
+[ext_resource type="PackedScene" uid="uid://q1d7iycpesjo" path="res://assets/Prefab_kinda/Pause_Menu/controlPause.tscn" id="2_1apgh"]
+[ext_resource type="PackedScene" uid="uid://dprho8jmoqejn" path="res://assets/player/player.tscn" id="3_ue4po"]
+[ext_resource type="Script" uid="uid://dm6iobhc3btjl" path="res://assets/camera/camera_follow.gd" id="4_uoomo"]
+[ext_resource type="PackedScene" uid="uid://ciaa83hid64qs" path="res://assets/level_prefabs/block.tscn" id="8_mhlpv"]
+[ext_resource type="PackedScene" uid="uid://bk3mvo1ti5trv" path="res://assets/level_prefabs/spike/spike.tscn" id="9_ng020"]
+[ext_resource type="PackedScene" uid="uid://cu1nlk2ttt3x" path="res://assets/level_prefabs/falling_block/falling_block.tscn" id="10_vn2uo"]
+[ext_resource type="PackedScene" uid="uid://ctrl7ma3y2b0k" path="res://assets/level_prefabs/pollen/pollen.tscn" id="12_uvwjj"]
+[ext_resource type="PackedScene" uid="uid://cvku1me4whylh" path="res://assets/level_prefabs/Checkpoint/checkpoint.tscn" id="13_ukdoj"]
+[ext_resource type="Texture2D" uid="uid://bugxwog3r3sve" path="res://assets/sprites/black.png" id="19_uv1om"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(-1, 0)
+
+[node name="Jump" parent="." instance=ExtResource("1_5qi50")]
+
+[node name="Spawn" type="Node2D" parent="."]
+position = Vector2(459, 444)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("2_1apgh")]
+
+[node name="Player" parent="." node_paths=PackedStringArray("Particle_fx") instance=ExtResource("3_ue4po")]
+position = Vector2(585, 442)
+Particle_fx = NodePath("../Jump")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+process_mode = 3
+position = Vector2(418, 344)
+script = ExtResource("4_uoomo")
+
+[node name="Interractables" type="Node2D" parent="."]
+
+[node name="Pollen" parent="Interractables" instance=ExtResource("12_uvwjj")]
+position = Vector2(-204, 360)
+
+[node name="Checkpoint_1" parent="Interractables" instance=ExtResource("13_ukdoj")]
+position = Vector2(-772, 547)
+
+[node name="CPUParticles2D14" type="CPUParticles2D" parent="."]
+position = Vector2(-242, -538)
+emitting = false
+texture = ExtResource("19_uv1om")
+lifetime = 1.7
+speed_scale = 0.16
+randomness = 0.36
+lifetime_randomness = 0.39
+emission_shape = 3
+emission_rect_extents = Vector2(257.15, 2.115)
+spread = 68.36
+initial_velocity_max = 1.41
+angular_velocity_max = 154.5
+tangential_accel_max = 25.9
+damping_min = 2.17
+damping_max = 5.12
+angle_max = 360.0
+scale_amount_min = 0.02
+scale_amount_max = 0.04
+
+[node name="level_geom" type="Node2D" parent="."]
+
+[node name="Block" parent="level_geom" instance=ExtResource("8_mhlpv")]
+position = Vector2(953, 652)
+
+[node name="Block3" parent="level_geom" instance=ExtResource("8_mhlpv")]
+position = Vector2(1253, 489)
+scale = Vector2(24.05509, 23.255505)
+
+[node name="Block2" parent="level_geom" instance=ExtResource("8_mhlpv")]
+position = Vector2(-325, 878)
+scale = Vector2(178.12207, 15.376825)
+
+[node name="Block4" parent="level_geom" instance=ExtResource("8_mhlpv")]
+position = Vector2(1458, -2089)
+rotation = 1.5707964
+scale = Vector2(151.75955, 68.821915)
+
+[node name="Block7" parent="level_geom" instance=ExtResource("8_mhlpv")]
+position = Vector2(-458, -1061)
+rotation = 1.5707964
+scale = Vector2(11.843904, 82.03876)
+
+[node name="Block8" parent="level_geom" instance=ExtResource("8_mhlpv")]
+position = Vector2(-1194, -2722)
+rotation = 1.5707964
+scale = Vector2(12.083903, 81.918755)
+
+[node name="Block5" parent="level_geom" instance=ExtResource("8_mhlpv")]
+position = Vector2(49.000015, -4473)
+rotation = 1.5707964
+scale = Vector2(33.454006, 140.40492)
+
+[node name="Block6" parent="level_geom" instance=ExtResource("8_mhlpv")]
+position = Vector2(-2865, -1851.0001)
+rotation = -3.1415925
+scale = Vector2(53.569366, 206.84476)
+
+[node name="Spike" parent="level_geom" instance=ExtResource("9_ng020")]
+position = Vector2(254, 634)
+
+[node name="Spike2" parent="level_geom" instance=ExtResource("9_ng020")]
+position = Vector2(77, 634)
+
+[node name="Spike3" parent="level_geom" instance=ExtResource("9_ng020")]
+position = Vector2(-106, 634)
+
+[node name="Spike4" parent="level_geom" instance=ExtResource("9_ng020")]
+position = Vector2(-286, 634)
+
+[node name="Spike5" parent="level_geom" instance=ExtResource("9_ng020")]
+position = Vector2(-463, 634)
+
+[node name="Spike6" parent="level_geom" instance=ExtResource("9_ng020")]
+position = Vector2(-646, 634)
+
+[node name="Falling_Block" parent="." instance=ExtResource("10_vn2uo")]
+position = Vector2(140, 424)
