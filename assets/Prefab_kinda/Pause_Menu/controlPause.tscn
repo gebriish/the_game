@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://q1d7iycpesjo"]
+[gd_scene load_steps=5 format=3 uid="uid://q1d7iycpesjo"]
 
+[ext_resource type="Shader" uid="uid://cl3aycxx6oy57" path="res://assets/Prefab_kinda/Pause_Menu/Pause_menu.gdshader" id="1_eh8hr"]
 [ext_resource type="PackedScene" uid="uid://b8xc7a7j6c3b5" path="res://assets/Prefab_kinda/Button/texture_button.tscn" id="1_mlor7"]
 
 [sub_resource type="GDScript" id="GDScript_emidj"]
@@ -43,6 +44,12 @@ func _on_quit_game_button_down() -> void:
 func _process(delta: float) -> void:
 	test_esc()
 "
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eh8hr"]
+shader = ExtResource("1_eh8hr")
+shader_parameter/intensity = 1.230000058425
+shader_parameter/smoothness = 1.4830000704425
+shader_parameter/vignette_color = Color(0, 0, 0, 1)
 
 [node name="Pause_Menu" type="Control"]
 process_mode = 3
@@ -91,6 +98,14 @@ arrow_margin_from_center = 140
 layout_mode = 2
 text = "QUIT GAME"
 arrow_margin_from_center = 85
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_eh8hr")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 

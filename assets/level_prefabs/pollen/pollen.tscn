@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctrl7ma3y2b0k"]
+[gd_scene load_steps=6 format=3 uid="uid://ctrl7ma3y2b0k"]
 
 [ext_resource type="Script" uid="uid://chavbqybxj3h4" path="res://assets/level_prefabs/pollen/pollen.gd" id="1_04gla"]
 [ext_resource type="Texture2D" uid="uid://d24emgns8mtm2" path="res://assets/sprites/white.png" id="1_phhlh"]
+[ext_resource type="PackedScene" uid="uid://c06pvw6n5qbmm" path="res://assets/Particles/Pollen_particles.tscn" id="3_iywwc"]
 [ext_resource type="AudioStream" uid="uid://de4twdf68a0m5" path="res://assets/audio/collect.wav" id="3_yoq1i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_04gla"]
 
 [node name="Pollen" type="Node2D"]
+self_modulate = Color(1.353256, 1.0165226, 1.353256, 1)
 script = ExtResource("1_04gla")
+
+[node name="PollenParticles" parent="." instance=ExtResource("3_iywwc")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.9098039, 0.6666667, 0.1882353, 1)
