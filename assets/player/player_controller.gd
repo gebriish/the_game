@@ -504,3 +504,4 @@ func die() -> void:
 
 	await get_tree().create_timer(0.35).timeout 
 	respawn()
+	

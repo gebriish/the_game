@@ -5,51 +5,56 @@
 
 [sub_resource type="GDScript" id="GDScript_emidj"]
 script/source = "extends Control
+
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
 @onready var resume_: TextureButton = $CanvasLayer/VBoxContainer/Resume
-#@export var PauseMenu: CanvasLayer
+@export var player: Node2D
 
 func resume():
-	canvas_layer.visible = false
-	get_tree().paused = false
+	if canvas_layer:
+		canvas_layer.visible = false
+	if get_tree():
+		get_tree().paused = false
+
 func pause():
-	canvas_layer.visible = true
-	get_tree().paused = true
+	if canvas_layer:
+		canvas_layer.visible = true
+	if get_tree():
+		get_tree().paused = true
 
 func test_esc():
+	if not get_tree() or get_tree().current_scene == null:
+		return
 	if Input.is_action_just_pressed(\"Pause\"):
 		if get_tree().paused:
 			resume()
 		else:
 			pause()
 			await get_tree().process_frame
-			resume_.grab_focus()
-			
-
+			if resume_:
+				resume_.grab_focus()
 
 func _on_resume_button_down() -> void:
 	resume()
 
 func _on_quit_menu_button_down() -> void:
-	resume() 
-	get_tree().change_scene_to_file(\"res://Scenes/main_menu.tscn\")
+	resume()
+	if get_tree():
+		get_tree().change_scene_to_file(\"res://Scenes/main_menu.tscn\")
 
 func _on_quit_game_button_down() -> void:
-	get_tree().quit()
-	
+	if get_tree():
+		get_tree().quit()
 
 func _on_restart_button_down() -> void:
 	resume()
-	get_tree().reload_current_scene()
+	if get_tree():
+		get_tree().reload_current_scene()
 
-@export var player:Node2D
 func _on_restart_check_button_down() -> void:
-	player.respawn()
+	if player and player.has_method(\"respawn\"):
+		player.respawn()
 	resume()
-
-#func _ready() -> void:
-	#await get_tree().process_frame
-	#resume()
 
 func _process(delta: float) -> void:
 	test_esc()
@@ -109,7 +114,7 @@ arrow_margin_from_center = 71
 
 [node name="Restart_check" parent="CanvasLayer/VBoxContainer" instance=ExtResource("1_mlor7")]
 layout_mode = 2
-text = "Restart From last checkpoint"
+text = "load last checkpoint"
 arrow_margin_from_center = 208
 
 [node name="Quit_Menu" parent="CanvasLayer/VBoxContainer" instance=ExtResource("1_mlor7")]

@@ -1,0 +1,145 @@
+[gd_scene load_steps=9 format=3 uid="uid://ccq4exb8gk87o"]
+
+[ext_resource type="PackedScene" uid="uid://bsktspv78ug47" path="res://assets/Particles/Jump.tscn" id="1_tc3ri"]
+[ext_resource type="PackedScene" uid="uid://q1d7iycpesjo" path="res://assets/Prefab_kinda/Pause_Menu/controlPause.tscn" id="2_3nkac"]
+[ext_resource type="PackedScene" uid="uid://dprho8jmoqejn" path="res://assets/player/player.tscn" id="3_eqm1k"]
+[ext_resource type="Script" uid="uid://dm6iobhc3btjl" path="res://assets/camera/camera_follow.gd" id="4_d08tm"]
+[ext_resource type="PackedScene" uid="uid://doloo5sjofdey" path="res://assets/level_prefabs/amethyst_lift/amethyst_lift.tscn" id="6_mrxql"]
+[ext_resource type="PackedScene" uid="uid://0cu7m2ujsoi1" path="res://assets/level_prefabs/amethyst/amethyst.tscn" id="7_qrg6c"]
+[ext_resource type="PackedScene" uid="uid://bk3mvo1ti5trv" path="res://assets/level_prefabs/spike/spike.tscn" id="8_1x0xh"]
+[ext_resource type="PackedScene" uid="uid://ciaa83hid64qs" path="res://assets/level_prefabs/block.tscn" id="11_5qe4c"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Jump" parent="." instance=ExtResource("1_tc3ri")]
+
+[node name="Spawn" type="Node2D" parent="."]
+position = Vector2(159, 268)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause_Menu" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("2_3nkac")]
+player = NodePath("../../Player")
+
+[node name="Player" parent="." node_paths=PackedStringArray("Particle_fx") instance=ExtResource("3_eqm1k")]
+position = Vector2(331, 274)
+Particle_fx = NodePath("../Jump")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+process_mode = 3
+position = Vector2(159, 291)
+script = ExtResource("4_d08tm")
+
+[node name="Block" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(1734, 471)
+scale = Vector2(118.71811, 8.624366)
+
+[node name="Block13" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(17.000061, 233)
+scale = Vector2(4.8621387, 10.568818)
+
+[node name="Block16" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(539, 417)
+scale = Vector2(4.8621387, 10.568818)
+
+[node name="Block5" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(3183.0002, 284)
+scale = Vector2(79.23811, 11.184366)
+
+[node name="Block8" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(5390, 26)
+scale = Vector2(111.79811, 11.184366)
+
+[node name="Block9" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(6333, -650.9999)
+rotation = 1.5707964
+scale = Vector2(103.51811, 12.144368)
+
+[node name="Block11" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(7453.001, -3160)
+rotation = 3.1415927
+scale = Vector2(101.71854, 71.04329)
+
+[node name="Block12" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(6122.0005, -3513)
+rotation = 3.1415927
+scale = Vector2(101.71854, 71.04329)
+
+[node name="Block4" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(1882.0004, 205.99997)
+rotation = -1.5707964
+scale = Vector2(70.34525, 6.063164)
+
+[node name="Block15" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(2267.0002, -837.00006)
+rotation = -1.5707964
+scale = Vector2(19.462536, 2.2303543)
+
+[node name="Block14" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(1493, -1037)
+rotation = -1.5707964
+scale = Vector2(10.071696, 1.3581936)
+
+[node name="Block6" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(3656, -386.9999)
+rotation = -1.5707964
+scale = Vector2(70.34525, 6.063164)
+
+[node name="Block2" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(-158.00002, -716.00006)
+scale = Vector2(26.499208, 56.0761)
+
+[node name="Block3" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(39, -2549)
+scale = Vector2(121.30554, 90.2299)
+
+[node name="Block7" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(1804, -3185)
+scale = Vector2(121.30554, 90.2299)
+
+[node name="Block10" parent="." instance=ExtResource("11_5qe4c")]
+position = Vector2(4045, -3499)
+scale = Vector2(98.78554, 90.2299)
+
+[node name="Amethyst_Lift" parent="." instance=ExtResource("6_mrxql")]
+position = Vector2(1650, 313)
+lift_height = -1210.65
+lift_speed = 500.0
+
+[node name="Amethyst_Lift2" parent="." instance=ExtResource("6_mrxql")]
+position = Vector2(2115, -1127)
+lift_height = -450.0
+lift_speed = 128.0
+
+[node name="Amethyst" parent="." instance=ExtResource("7_qrg6c")]
+position = Vector2(2118, -1252)
+
+[node name="Spike2" parent="." instance=ExtResource("8_1x0xh")]
+position = Vector2(661, 335)
+
+[node name="Spike8" parent="." instance=ExtResource("8_1x0xh")]
+position = Vector2(662, 346)
+rotation = 0.81209904
+
+[node name="Spike3" parent="." instance=ExtResource("8_1x0xh")]
+position = Vector2(843, 334)
+
+[node name="Spike4" parent="." instance=ExtResource("8_1x0xh")]
+position = Vector2(1017, 335)
+
+[node name="Spike5" parent="." instance=ExtResource("8_1x0xh")]
+position = Vector2(1199, 334)
+
+[node name="Spike6" parent="." instance=ExtResource("8_1x0xh")]
+position = Vector2(1373, 335)
+
+[node name="Spike7" parent="." instance=ExtResource("8_1x0xh")]
+position = Vector2(1451, 343.99997)
+rotation = -0.3955264
+
+[node name="Amethyst_Lift3" parent="." instance=ExtResource("6_mrxql")]
+position = Vector2(537, 250)
+lift_height = -500.0
+
+[node name="Amethyst2" parent="." instance=ExtResource("7_qrg6c")]
+position = Vector2(538, 175)

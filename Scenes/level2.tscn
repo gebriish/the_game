@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bkn5q7tc1ifuj"]
+[gd_scene load_steps=21 format=3 uid="uid://bkn5q7tc1ifuj"]
 
 [ext_resource type="PackedScene" uid="uid://bsktspv78ug47" path="res://assets/Particles/Jump.tscn" id="1_5qi50"]
 [ext_resource type="PackedScene" uid="uid://q1d7iycpesjo" path="res://assets/Prefab_kinda/Pause_Menu/controlPause.tscn" id="2_1apgh"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://ctrl7ma3y2b0k" path="res://assets/level_prefabs/pollen/pollen.tscn" id="12_uvwjj"]
 [ext_resource type="PackedScene" uid="uid://cvku1me4whylh" path="res://assets/level_prefabs/Checkpoint/checkpoint.tscn" id="13_ukdoj"]
 [ext_resource type="PackedScene" uid="uid://0cu7m2ujsoi1" path="res://assets/level_prefabs/amethyst/amethyst.tscn" id="13_vn460"]
-[ext_resource type="Script" uid="uid://ctbbxhmmnmexc" path="res://assets/level_prefabs/amethyst/amethyst.gd" id="14_r8hce"]
 [ext_resource type="Texture2D" uid="uid://ybtilaqb2uj4" path="res://assets/sprites/flower1.png" id="16_yj6rp"]
 [ext_resource type="Texture2D" uid="uid://cajf6x4pb1nkj" path="res://assets/sprites/flower2.png" id="17_orbd0"]
 [ext_resource type="Texture2D" uid="uid://cagkiki53uy1b" path="res://assets/sprites/flower3.png" id="18_5flq6"]
@@ -43,7 +42,7 @@ position = Vector2(459, 444)
 player = NodePath("../../Player")
 
 [node name="Player" parent="." node_paths=PackedStringArray("Particle_fx") instance=ExtResource("3_ue4po")]
-position = Vector2(-1613, -1695)
+position = Vector2(438, 432)
 Particle_fx = NodePath("../Jump")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -2490,15 +2489,12 @@ position = Vector2(-1926, 601)
 
 [node name="Amethyst" parent="level_geom" instance=ExtResource("13_vn460")]
 position = Vector2(290, -141)
-script = ExtResource("14_r8hce")
 
 [node name="Amethyst2" parent="." instance=ExtResource("13_vn460")]
 position = Vector2(-1948, -2219)
-script = ExtResource("14_r8hce")
 
 [node name="Amethyst3" parent="." instance=ExtResource("13_vn460")]
 position = Vector2(206, -3761)
-script = ExtResource("14_r8hce")
 
 [node name="Node2D" type="Node2D" parent="."]
 
