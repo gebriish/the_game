@@ -8,11 +8,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7tmfp"]
 size = Vector2(32, 56)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("feet", "side", "Particle_fx")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("feet", "side")]
 script = ExtResource("1_h6syq")
 feet = NodePath("feet")
 side = NodePath("side")
-Particle_fx = NodePath("")
 
 [node name="BoundingBox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7tmfp")
@@ -34,14 +33,14 @@ texture = ExtResource("2_v2miy")
 position = Vector2(-7, -25)
 
 [node name="base" type="Sprite2D" parent="Rotatable/Antena1"]
-modulate = Color(0.11858138, 0.11858138, 0.11858138, 1)
+modulate = Color(0, 0, 0, 1)
 position = Vector2(-1.000001, -11)
 rotation = -0.22478293
 scale = Vector2(0.16000092, 0.6078811)
 texture = ExtResource("2_v2miy")
 
 [node name="bob" type="Sprite2D" parent="Rotatable/Antena1"]
-modulate = Color(0.11858138, 0.11858138, 0.11858138, 1)
+modulate = Color(0, 0, 0, 1)
 position = Vector2(-4.9312773, -18.03883)
 rotation = -0.40934804
 scale = Vector2(0.3038461, 0.25670004)
@@ -51,21 +50,21 @@ texture = ExtResource("2_v2miy")
 position = Vector2(7, -24)
 
 [node name="bob" type="Sprite2D" parent="Rotatable/Antena2"]
-modulate = Color(0.11858138, 0.11858138, 0.11858138, 1)
+modulate = Color(0, 0, 0, 1)
 position = Vector2(5.999999, -19.999996)
 rotation = 0.19009504
 scale = Vector2(0.30384612, 0.2567)
 texture = ExtResource("2_v2miy")
 
 [node name="base" type="Sprite2D" parent="Rotatable/Antena2"]
-modulate = Color(0.11858138, 0.11858138, 0.11858138, 1)
+modulate = Color(0, 0, 0, 1)
 position = Vector2(2, -12.000004)
 rotation = 0.19530201
 scale = Vector2(0.16000092, 0.6078811)
 texture = ExtResource("2_v2miy")
 
 [node name="Body" type="Sprite2D" parent="Rotatable"]
-modulate = Color(0.11858138, 0.11858138, 0.11858138, 1)
+modulate = Color(0, 0, 0, 1)
 scale = Vector2(1, 1.75)
 texture = ExtResource("2_v2miy")
 
@@ -73,7 +72,7 @@ texture = ExtResource("2_v2miy")
 position = Vector2(-6, -17)
 
 [node name="bal2" type="Sprite2D" parent="Rotatable/Eye1"]
-modulate = Color(0.11764706, 0.11764706, 0.11764706, 1)
+modulate = Color(0, 0, 0, 1)
 position = Vector2(16, -1.9073486e-06)
 scale = Vector2(0.44471338, 0.37884316)
 texture = ExtResource("2_v2miy")
@@ -110,7 +109,7 @@ scale = Vector2(1.7200012, 0.28000003)
 script = ExtResource("4_ouxva")
 
 [node name="BarBG" type="Sprite2D" parent="StaminaBar"]
-modulate = Color(0.103743516, 0.10374353, 0.103743516, 1)
+modulate = Color(0.017732397, 0.01773239, 0.01773239, 1)
 texture = ExtResource("2_v2miy")
 
 [node name="BarFill" type="Node2D" parent="StaminaBar"]

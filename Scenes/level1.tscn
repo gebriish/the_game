@@ -38,7 +38,7 @@ background_mode = 3
 ambient_light_source = 1
 tonemap_mode = 1
 glow_enabled = true
-glow_intensity = 0.16
+glow_intensity = 0.14
 glow_bloom = 1.0
 
 [node name="Node2D" type="Node2D"]
@@ -388,9 +388,9 @@ shape = SubResource("RectangleShape2D_ybjcv")
 
 [node name="Block45" type="Node2D" parent="Level_Geom"]
 z_index = 2
-position = Vector2(-3580, 1138.0001)
+position = Vector2(-3580, 1332)
 rotation = 6.2831855
-scale = Vector2(5.1366005, 4.7338552)
+scale = Vector2(5.1366005, 15.733856)
 
 [node name="Sprite2D" type="Sprite2D" parent="Level_Geom/Block45"]
 modulate = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
@@ -1142,8 +1142,8 @@ offset_left = -197.0
 offset_top = -172.0
 offset_right = 127.0
 offset_bottom = -117.0
-text = "Jump and attach to the wall
-        to wallslide"
+text = "Jump and hold right to 
+      qwall slide"
 label_settings = SubResource("LabelSettings_ulum1")
 
 [node name="Arrow" type="Sprite2D" parent="Tutrial/Tutorial4/Label"]
