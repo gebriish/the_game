@@ -8,10 +8,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7tmfp"]
 size = Vector2(32, 56)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("feet", "side")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("feet", "side", "Particle_fx")]
 script = ExtResource("1_h6syq")
-feet = NodePath("Rotatable/feet")
-side = NodePath("Rotatable/side")
+feet = NodePath("feet")
+side = NodePath("side")
+Particle_fx = NodePath("")
 
 [node name="BoundingBox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7tmfp")
@@ -119,3 +120,9 @@ position = Vector2(-16, 0)
 modulate = Color(0.9117393, 0.6679418, 0.18963033, 1)
 position = Vector2(16, 0)
 texture = ExtResource("2_v2miy")
+
+[node name="feet" type="Node2D" parent="."]
+position = Vector2(0, 27)
+
+[node name="side" type="Node2D" parent="."]
+position = Vector2(16, 27)

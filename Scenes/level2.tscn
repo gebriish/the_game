@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bkn5q7tc1ifuj"]
+[gd_scene load_steps=22 format=3 uid="uid://bkn5q7tc1ifuj"]
 
 [ext_resource type="PackedScene" uid="uid://bsktspv78ug47" path="res://assets/Particles/Jump.tscn" id="1_5qi50"]
 [ext_resource type="PackedScene" uid="uid://q1d7iycpesjo" path="res://assets/Prefab_kinda/Pause_Menu/controlPause.tscn" id="2_1apgh"]
@@ -10,11 +10,24 @@
 [ext_resource type="PackedScene" uid="uid://doloo5sjofdey" path="res://assets/level_prefabs/amethyst_lift/amethyst_lift.tscn" id="9_vn460"]
 [ext_resource type="PackedScene" uid="uid://cu1nlk2ttt3x" path="res://assets/level_prefabs/falling_block/falling_block.tscn" id="10_vn2uo"]
 [ext_resource type="PackedScene" uid="uid://bsk1bmbq5bf8x" path="res://assets/level_prefabs/worker_ant/worker_ant.tscn" id="11_mtqcm"]
+[ext_resource type="Texture2D" uid="uid://cfxdldw7uw2sq" path="res://assets/sprites/st_3.png" id="12_in4v8"]
 [ext_resource type="PackedScene" uid="uid://ctrl7ma3y2b0k" path="res://assets/level_prefabs/pollen/pollen.tscn" id="12_uvwjj"]
 [ext_resource type="PackedScene" uid="uid://cvku1me4whylh" path="res://assets/level_prefabs/Checkpoint/checkpoint.tscn" id="13_ukdoj"]
 [ext_resource type="PackedScene" uid="uid://0cu7m2ujsoi1" path="res://assets/level_prefabs/amethyst/amethyst.tscn" id="13_vn460"]
 [ext_resource type="Script" uid="uid://ctbbxhmmnmexc" path="res://assets/level_prefabs/amethyst/amethyst.gd" id="14_r8hce"]
+[ext_resource type="Texture2D" uid="uid://ybtilaqb2uj4" path="res://assets/sprites/flower1.png" id="16_yj6rp"]
+[ext_resource type="Texture2D" uid="uid://cajf6x4pb1nkj" path="res://assets/sprites/flower2.png" id="17_orbd0"]
+[ext_resource type="Texture2D" uid="uid://cagkiki53uy1b" path="res://assets/sprites/flower3.png" id="18_5flq6"]
+[ext_resource type="Texture2D" uid="uid://b5fr2ehdvu5du" path="res://assets/sprites/branch_2.png" id="19_051s1"]
 [ext_resource type="Texture2D" uid="uid://bugxwog3r3sve" path="res://assets/sprites/black.png" id="19_uv1om"]
+
+[sub_resource type="Environment" id="Environment_ca0bt"]
+background_mode = 3
+ambient_light_source = 1
+tonemap_mode = 1
+glow_enabled = true
+glow_intensity = 0.16
+glow_bloom = 1.0
 
 [node name="Node2D" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-932.0, -1842.0]
@@ -29,7 +42,7 @@ position = Vector2(459, 444)
 [node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("2_1apgh")]
 
 [node name="Player" parent="." node_paths=PackedStringArray("Particle_fx") instance=ExtResource("3_ue4po")]
-position = Vector2(-1940, -2399)
+position = Vector2(97, -3836)
 Particle_fx = NodePath("../Jump")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -49,7 +62,7 @@ position = Vector2(-644, 306)
 position = Vector2(-1584, 373)
 
 [node name="Pollen4" parent="Interractables" instance=ExtResource("12_uvwjj")]
-position = Vector2(-1809, -42)
+position = Vector2(-1772.633, -79)
 
 [node name="Pollen5" parent="Interractables" instance=ExtResource("12_uvwjj")]
 position = Vector2(-1057, -293)
@@ -136,8 +149,7 @@ position = Vector2(-971, -2974)
 position = Vector2(-271, -2961)
 
 [node name="CPUParticles2D14" type="CPUParticles2D" parent="."]
-position = Vector2(-416, -821)
-emitting = false
+position = Vector2(76, 42)
 texture = ExtResource("19_uv1om")
 lifetime = 1.7
 speed_scale = 0.16
@@ -154,6 +166,306 @@ damping_max = 5.12
 angle_max = 360.0
 scale_amount_min = 0.02
 scale_amount_max = 0.04
+
+[node name="CPUParticles2D15" type="CPUParticles2D" parent="."]
+position = Vector2(102, -871)
+texture = ExtResource("19_uv1om")
+lifetime = 1.7
+speed_scale = 0.16
+randomness = 0.36
+lifetime_randomness = 0.39
+emission_shape = 3
+emission_rect_extents = Vector2(257.15, 2.115)
+spread = 68.36
+initial_velocity_max = 1.41
+angular_velocity_max = 154.5
+tangential_accel_max = 25.9
+damping_min = 2.17
+damping_max = 5.12
+angle_max = 360.0
+scale_amount_min = 0.02
+scale_amount_max = 0.04
+
+[node name="CPUParticles2D16" type="CPUParticles2D" parent="."]
+position = Vector2(-1242, -871)
+texture = ExtResource("19_uv1om")
+lifetime = 1.7
+speed_scale = 0.16
+randomness = 0.36
+lifetime_randomness = 0.39
+emission_shape = 3
+emission_rect_extents = Vector2(257.15, 2.115)
+spread = 68.36
+initial_velocity_max = 1.41
+angular_velocity_max = 154.5
+tangential_accel_max = 25.9
+damping_min = 2.17
+damping_max = 5.12
+angle_max = 360.0
+scale_amount_min = 0.02
+scale_amount_max = 0.04
+
+[node name="CPUParticles2D17" type="CPUParticles2D" parent="."]
+position = Vector2(-1736, -2107)
+texture = ExtResource("19_uv1om")
+lifetime = 1.7
+speed_scale = 0.16
+randomness = 0.36
+lifetime_randomness = 0.39
+emission_shape = 3
+emission_rect_extents = Vector2(257.15, 2.115)
+spread = 68.36
+initial_velocity_max = 1.41
+angular_velocity_max = 154.5
+tangential_accel_max = 25.9
+damping_min = 2.17
+damping_max = 5.12
+angle_max = 360.0
+scale_amount_min = 0.02
+scale_amount_max = 0.04
+
+[node name="CPUParticles2D18" type="CPUParticles2D" parent="."]
+position = Vector2(-1019, -2789)
+texture = ExtResource("19_uv1om")
+lifetime = 1.7
+speed_scale = 0.16
+randomness = 0.36
+lifetime_randomness = 0.39
+emission_shape = 3
+emission_rect_extents = Vector2(257.15, 2.115)
+spread = 68.36
+initial_velocity_max = 1.41
+angular_velocity_max = 154.5
+tangential_accel_max = 25.9
+damping_min = 2.17
+damping_max = 5.12
+angle_max = 360.0
+scale_amount_min = 0.02
+scale_amount_max = 0.04
+
+[node name="CPUParticles2D19" type="CPUParticles2D" parent="."]
+position = Vector2(-853, -4008)
+texture = ExtResource("19_uv1om")
+lifetime = 1.7
+speed_scale = 0.16
+randomness = 0.36
+lifetime_randomness = 0.39
+emission_shape = 3
+emission_rect_extents = Vector2(257.15, 2.115)
+spread = 68.36
+initial_velocity_max = 1.41
+angular_velocity_max = 154.5
+tangential_accel_max = 25.9
+damping_min = 2.17
+damping_max = 5.12
+angle_max = 360.0
+scale_amount_min = 0.02
+scale_amount_max = 0.04
+
+[node name="CPUParticles2D20" type="CPUParticles2D" parent="."]
+position = Vector2(-1182, -4752)
+texture = ExtResource("19_uv1om")
+lifetime = 1.7
+speed_scale = 0.16
+randomness = 0.36
+lifetime_randomness = 0.39
+emission_shape = 3
+emission_rect_extents = Vector2(257.15, 2.115)
+spread = 68.36
+initial_velocity_max = 1.41
+angular_velocity_max = 154.5
+tangential_accel_max = 25.9
+damping_min = 2.17
+damping_max = 5.12
+angle_max = 360.0
+scale_amount_min = 0.02
+scale_amount_max = 0.04
+
+[node name="CPUParticles2D21" type="CPUParticles2D" parent="."]
+position = Vector2(24, -4749)
+texture = ExtResource("19_uv1om")
+lifetime = 1.7
+speed_scale = 0.16
+randomness = 0.36
+lifetime_randomness = 0.39
+emission_shape = 3
+emission_rect_extents = Vector2(257.15, 2.115)
+spread = 68.36
+initial_velocity_max = 1.41
+angular_velocity_max = 154.5
+tangential_accel_max = 25.9
+damping_min = 2.17
+damping_max = 5.12
+angle_max = 360.0
+scale_amount_min = 0.02
+scale_amount_max = 0.04
+
+[node name="CPUParticles2D22" type="CPUParticles2D" parent="."]
+position = Vector2(-30, -4007)
+texture = ExtResource("19_uv1om")
+lifetime = 1.7
+speed_scale = 0.16
+randomness = 0.36
+lifetime_randomness = 0.39
+emission_shape = 3
+emission_rect_extents = Vector2(257.15, 2.115)
+spread = 68.36
+initial_velocity_max = 1.41
+angular_velocity_max = 154.5
+tangential_accel_max = 25.9
+damping_min = 2.17
+damping_max = 5.12
+angle_max = 360.0
+scale_amount_min = 0.02
+scale_amount_max = 0.04
+
+[node name="CPUParticles2D23" type="CPUParticles2D" parent="."]
+position = Vector2(-245, -2794)
+texture = ExtResource("19_uv1om")
+lifetime = 1.7
+speed_scale = 0.16
+randomness = 0.36
+lifetime_randomness = 0.39
+emission_shape = 3
+emission_rect_extents = Vector2(257.15, 2.115)
+spread = 68.36
+initial_velocity_max = 1.41
+angular_velocity_max = 154.5
+tangential_accel_max = 25.9
+damping_min = 2.17
+damping_max = 5.12
+angle_max = 360.0
+scale_amount_min = 0.02
+scale_amount_max = 0.04
+
+[node name="Flower_Parallax" type="Parallax2D" parent="."]
+scroll_offset = Vector2(1, 0)
+
+[node name="Flower12" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.7272795, 0.58444434, 0, 1)
+position = Vector2(-779, 364)
+rotation = 1.2545596
+scale = Vector2(0.20376335, 0.20376335)
+texture = ExtResource("16_yj6rp")
+flip_h = true
+
+[node name="Flower15" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.7272795, 0.58444434, 0, 1)
+position = Vector2(-1837, 446.99994)
+rotation = -0.9718763
+scale = Vector2(0.20376335, 0.20376335)
+texture = ExtResource("16_yj6rp")
+
+[node name="Flower13" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.7272795, 0.58444434, 0, 1)
+position = Vector2(-328, 8.999997)
+rotation = 1.8105898
+scale = Vector2(0.20376335, 0.20376335)
+texture = ExtResource("16_yj6rp")
+flip_h = true
+flip_v = true
+
+[node name="Flower16" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.7272795, 0.58444434, 0, 1)
+position = Vector2(319.00003, -1726.9999)
+rotation = 2.1961806
+scale = Vector2(0.20376335, 0.20376335)
+texture = ExtResource("16_yj6rp")
+flip_h = true
+flip_v = true
+
+[node name="Flower20" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.7272795, 0.58444434, 0, 1)
+position = Vector2(-22.99997, -3665)
+rotation = 1.2423604
+scale = Vector2(0.20376335, 0.20376335)
+texture = ExtResource("16_yj6rp")
+flip_h = true
+flip_v = true
+
+[node name="Flower11" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.74494535, 0.11873854, 0.17184749, 1)
+position = Vector2(-1963, -39.999973)
+rotation = 0.6615746
+scale = Vector2(0.16132164, 0.16132164)
+texture = ExtResource("17_orbd0")
+
+[node name="Flower14" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.74494535, 0.11873854, 0.17184749, 1)
+position = Vector2(-1811, -1000.9999)
+rotation = -0.54775286
+scale = Vector2(0.16132165, 0.16132165)
+texture = ExtResource("17_orbd0")
+flip_h = true
+
+[node name="Flower18" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.74494535, 0.11873854, 0.17184749, 1)
+position = Vector2(321.9999, -2294)
+rotation = -0.54775286
+scale = Vector2(0.15149555, 0.15149555)
+texture = ExtResource("17_orbd0")
+flip_h = true
+
+[node name="Flower19" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.74494535, 0.11873854, 0.17184749, 1)
+position = Vector2(310.99997, -2942)
+rotation = -0.54775286
+scale = Vector2(0.18571976, 0.18571976)
+texture = ExtResource("17_orbd0")
+flip_h = true
+
+[node name="Flower6" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.308989, 0.79175293, 0.76001126, 1)
+position = Vector2(-818.00006, -171)
+rotation = 0.13756175
+scale = Vector2(0.18317747, 0.18317747)
+texture = ExtResource("18_5flq6")
+flip_h = true
+
+[node name="Flower7" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.308989, 0.79175293, 0.76001126, 1)
+position = Vector2(334.99997, 248.99998)
+rotation = -0.4796011
+scale = Vector2(0.18317746, 0.18317746)
+texture = ExtResource("18_5flq6")
+flip_h = true
+
+[node name="Flower5" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.98335296, 0.50354975, 0.53597426, 1)
+position = Vector2(-894, -489.99994)
+rotation = 0.8600954
+scale = Vector2(0.16993587, 0.16993587)
+texture = ExtResource("17_orbd0")
+
+[node name="Flower9" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.98335296, 0.50354975, 0.53597426, 1)
+position = Vector2(156.99994, -2077)
+rotation = 0.8600954
+scale = Vector2(0.16993587, 0.16993587)
+texture = ExtResource("17_orbd0")
+
+[node name="Flower10" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.98335296, 0.50354975, 0.53597426, 1)
+position = Vector2(317.00006, -2546)
+rotation = -0.5926108
+scale = Vector2(0.16993587, 0.16993587)
+texture = ExtResource("17_orbd0")
+flip_h = true
+
+[node name="Flower17" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.98335296, 0.50354975, 0.53597426, 1)
+position = Vector2(165.00009, -2873.9998)
+rotation = 0.68587995
+scale = Vector2(0.16993587, 0.16993587)
+texture = ExtResource("17_orbd0")
+
+[node name="Flower8" type="Sprite2D" parent="Flower_Parallax"]
+modulate = Color(0.98335296, 0.50354975, 0.53597426, 1)
+position = Vector2(-1073, -389.00006)
+rotation = -0.5619466
+scale = Vector2(0.16993587, 0.16993587)
+texture = ExtResource("17_orbd0")
+flip_h = true
 
 [node name="level_geom" type="Node2D" parent="."]
 z_index = 4
@@ -197,7 +509,7 @@ position = Vector2(-1654.0001, 471)
 scale = Vector2(9.144344, 2.610326)
 
 [node name="Block16" parent="level_geom" instance=ExtResource("8_mhlpv")]
-position = Vector2(-1804, 168)
+position = Vector2(-1767.633, 131)
 rotation = 1.5707964
 scale = Vector2(10.875843, 2.610326)
 
@@ -398,6 +710,12 @@ position = Vector2(-614.99994, -5275)
 rotation = 1.5707964
 scale = Vector2(33.454006, 177.88492)
 
+[node name="St3" type="Sprite2D" parent="level_geom"]
+position = Vector2(-354, -2695)
+rotation = 0.06085545
+scale = Vector2(0.47023797, 0.47023797)
+texture = ExtResource("12_in4v8")
+
 [node name="Block6" parent="level_geom" instance=ExtResource("8_mhlpv")]
 position = Vector2(-2865, -1851.0001)
 rotation = -3.1415925
@@ -589,7 +907,7 @@ position = Vector2(-2012.0001, 417)
 rotation = 1.6304013
 
 [node name="Spike18" parent="level_geom" instance=ExtResource("9_ng020")]
-position = Vector2(-1840.9999, 98)
+position = Vector2(-1804.6329, 61)
 rotation = 1.5311906
 
 [node name="Spike17" parent="level_geom" instance=ExtResource("9_ng020")]
@@ -964,6 +1282,13 @@ rotation = 3.1943734
 scale = Vector2(1.2502836, 1.15)
 texture = ExtResource("6_ca0bt")
 
+[node name="Ground284" type="Sprite2D" parent="level_geom"]
+z_index = 3
+position = Vector2(-1757, -1182.0001)
+rotation = 4.6425467
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("6_ca0bt")
+
 [node name="Ground241" type="Sprite2D" parent="level_geom"]
 z_index = 3
 position = Vector2(314.00003, -1404)
@@ -1010,6 +1335,69 @@ texture = ExtResource("6_ca0bt")
 z_index = 3
 position = Vector2(-1667.0001, -4169)
 rotation = 6.2737536
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("6_ca0bt")
+
+[node name="Ground275" type="Sprite2D" parent="level_geom"]
+z_index = 3
+position = Vector2(-1954.0001, -4751)
+rotation = 9.322882
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("6_ca0bt")
+
+[node name="Ground276" type="Sprite2D" parent="level_geom"]
+z_index = 3
+position = Vector2(-2019.9999, -4681)
+rotation = 7.907255
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("6_ca0bt")
+
+[node name="Ground277" type="Sprite2D" parent="level_geom"]
+z_index = 3
+position = Vector2(430.00003, -4505)
+rotation = 6.2857113
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("6_ca0bt")
+
+[node name="Ground278" type="Sprite2D" parent="level_geom"]
+z_index = 3
+position = Vector2(370.00006, -4447)
+rotation = 4.6341305
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("6_ca0bt")
+
+[node name="Ground279" type="Sprite2D" parent="level_geom"]
+z_index = 3
+position = Vector2(481, -4758)
+rotation = 6.364993
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("6_ca0bt")
+
+[node name="Ground280" type="Sprite2D" parent="level_geom"]
+z_index = 3
+position = Vector2(507, -4507.0005)
+rotation = 6.159825
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("6_ca0bt")
+
+[node name="Ground281" type="Sprite2D" parent="level_geom"]
+z_index = 3
+position = Vector2(543, -4556.0005)
+rotation = 4.7273874
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("6_ca0bt")
+
+[node name="Ground282" type="Sprite2D" parent="level_geom"]
+z_index = 3
+position = Vector2(540.99994, -4712)
+rotation = 4.566096
+scale = Vector2(1.2502836, 1.15)
+texture = ExtResource("6_ca0bt")
+
+[node name="Ground283" type="Sprite2D" parent="level_geom"]
+z_index = 3
+position = Vector2(540.99994, -4712)
+rotation = 4.566096
 scale = Vector2(1.2502836, 1.15)
 texture = ExtResource("6_ca0bt")
 
@@ -1930,51 +2318,61 @@ rotation = 1.5429645
 scale = Vector2(0.72489727, 0.8955641)
 texture = ExtResource("6_ca0bt")
 
+[node name="Ground285" type="Sprite2D" parent="level_geom"]
+z_index = 3
+position = Vector2(-1757.0001, 502.00003)
+rotation = 3.0412483
+scale = Vector2(0.72489727, 0.8955641)
+texture = ExtResource("6_ca0bt")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="level_geom/Ground285"]
+environment = SubResource("Environment_ca0bt")
+
 [node name="Ground105" type="Sprite2D" parent="level_geom"]
 z_index = 3
-position = Vector2(-1838, 301.00003)
+position = Vector2(-1801.633, 264.00003)
 rotation = 1.5816091
 scale = Vector2(0.72489727, 0.8955641)
 texture = ExtResource("6_ca0bt")
 
 [node name="Ground106" type="Sprite2D" parent="level_geom"]
 z_index = 3
-position = Vector2(-1835.0001, 231.00006)
+position = Vector2(-1798.6332, 194.00006)
 rotation = 1.5816091
 scale = Vector2(0.72489727, 0.8955641)
 texture = ExtResource("6_ca0bt")
 
 [node name="Ground107" type="Sprite2D" parent="level_geom"]
 z_index = 3
-position = Vector2(-1771, 300)
+position = Vector2(-1734.633, 263)
 rotation = 1.4919746
 scale = Vector2(0.72489727, 0.8955641)
 texture = ExtResource("6_ca0bt")
 
 [node name="Ground109" type="Sprite2D" parent="level_geom"]
 z_index = 3
-position = Vector2(-1774, 230)
+position = Vector2(-1737.633, 193)
 rotation = 1.4714588
 scale = Vector2(0.72489727, 0.8955641)
 texture = ExtResource("6_ca0bt")
 
 [node name="Ground110" type="Sprite2D" parent="level_geom"]
 z_index = 3
-position = Vector2(-1772.9999, 36.000008)
+position = Vector2(-1736.6329, -0.99999285)
 rotation = 1.6188661
 scale = Vector2(0.72489727, 0.8955641)
 texture = ExtResource("6_ca0bt")
 
 [node name="Ground111" type="Sprite2D" parent="level_geom"]
 z_index = 3
-position = Vector2(-1807.0001, 1.9999986)
+position = Vector2(-1770.6332, -35)
 rotation = -0.0442831
 scale = Vector2(0.72489727, 0.8955641)
 texture = ExtResource("6_ca0bt")
 
 [node name="Ground108" type="Sprite2D" parent="level_geom"]
 z_index = 3
-position = Vector2(-1804, 330)
+position = Vector2(-1767.633, 293)
 rotation = -0.026450038
 scale = Vector2(0.72489727, 0.8955641)
 texture = ExtResource("6_ca0bt")
@@ -2057,7 +2455,7 @@ position = Vector2(70, -4520)
 position = Vector2(-862, 520)
 
 [node name="Falling_Block4" parent="level_geom" instance=ExtResource("10_vn2uo")]
-position = Vector2(-1423, -28)
+position = Vector2(-1429.9999, -32)
 
 [node name="Falling_Block9" parent="level_geom" instance=ExtResource("10_vn2uo")]
 position = Vector2(-608, -3509)
@@ -2081,7 +2479,7 @@ position = Vector2(-1740, -1607)
 position = Vector2(66, -2996)
 
 [node name="Checkpoint6" parent="level_geom" instance=ExtResource("13_ukdoj")]
-position = Vector2(132, -3813)
+position = Vector2(-273, -3769)
 
 [node name="Checkpoint7" parent="level_geom" instance=ExtResource("13_ukdoj")]
 position = Vector2(-1897, -4645)
@@ -2100,3 +2498,1259 @@ script = ExtResource("14_r8hce")
 [node name="Amethyst3" parent="." instance=ExtResource("13_vn460")]
 position = Vector2(206, -3761)
 script = ExtResource("14_r8hce")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+modulate = Color(0.5489626, 0.5489626, 0.54896253, 1)
+z_index = -10
+scroll_scale = Vector2(0.5, 0.5)
+scroll_offset = Vector2(-927, -2726)
+
+[node name="Node2D2" type="Node2D" parent="Parallax2D2"]
+position = Vector2(-1380, -2147)
+rotation = 0.48302615
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D2/Node2D2"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D2/Node2D2"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D2/Node2D2"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D2/Node2D2"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D2/Node2D2"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D2/Node2D2"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D2/Node2D2"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D2/Node2D2"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D2/Node2D2"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D2/Node2D2"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D8" type="Node2D" parent="Parallax2D2"]
+position = Vector2(-1292, 1998)
+rotation = 0.08403315
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D2/Node2D8"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D2/Node2D8"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D2/Node2D8"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D2/Node2D8"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D2/Node2D8"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D2/Node2D8"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D2/Node2D8"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D2/Node2D8"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D2/Node2D8"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D2/Node2D8"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D11" type="Node2D" parent="Parallax2D2"]
+position = Vector2(-1491, -1241.9999)
+rotation = 0.010707013
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D2/Node2D11"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D2/Node2D11"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D2/Node2D11"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D2/Node2D11"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D2/Node2D11"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D2/Node2D11"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D2/Node2D11"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D2/Node2D11"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D2/Node2D11"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D2/Node2D11"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D12" type="Node2D" parent="Parallax2D2"]
+position = Vector2(-1391, -1761)
+rotation = -0.25934488
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D2/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D2/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D2/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D2/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Node2D9" type="Node2D" parent="Parallax2D2"]
+position = Vector2(-2485, 1797)
+rotation = -0.033637874
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D2/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D2/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D2/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D2/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D2/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D2/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D2/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D2/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D2/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D2/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D10" type="Node2D" parent="Parallax2D2"]
+position = Vector2(-1400.9995, 2499.9998)
+rotation = 0.45202652
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D2/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D2/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D2/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D2/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D2/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D2/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D2/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D2/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D2/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D2/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D3" type="Node2D" parent="Parallax2D2"]
+position = Vector2(-1455.0007, -310)
+rotation = 0.32121798
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D2/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D2/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D2/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D2/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D2/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D2/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D2/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D2/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D2/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D2/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D4" type="Node2D" parent="Parallax2D2"]
+position = Vector2(-1192, 307.99988)
+rotation = 0.68570274
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D2/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D2/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D2/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D2/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D2/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D2/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D2/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D2/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D2/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D2/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D5" type="Node2D" parent="Parallax2D2"]
+position = Vector2(-1604.0001, 933.001)
+rotation = 0.17736316
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D2/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D2/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D2/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D2/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D2/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D2/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D2/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D2/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D2/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D2/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D6" type="Node2D" parent="Parallax2D2"]
+position = Vector2(-1593.0005, 765.99976)
+rotation = -0.27654475
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D2/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D2/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D2/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D2/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D2/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D2/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D2/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D2/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D2/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D2/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D7" type="Node2D" parent="Parallax2D2"]
+position = Vector2(-1462, -911)
+rotation = 0.3259278
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D2/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D2/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D2/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D2/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D2/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D2/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D2/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D2/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D2/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D2/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D13" type="Node2D" parent="Parallax2D2"]
+position = Vector2(-1462, -911)
+rotation = 0.3259278
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D2/Node2D13"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D2/Node2D13"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D2/Node2D13"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D2/Node2D13"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D2/Node2D13"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D2/Node2D13"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D2/Node2D13"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D2/Node2D13"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D2/Node2D13"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D2/Node2D13"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+z_index = -6
+scroll_scale = Vector2(0.9, 0.9)
+
+[node name="Node2D12" type="Node2D" parent="Parallax2D"]
+position = Vector2(-2408.9998, -2959)
+rotation = 0.41305357
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D/Node2D12"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D9" type="Node2D" parent="Parallax2D"]
+position = Vector2(-1069, -5236)
+rotation = 0.82717216
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D/Node2D9"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D10" type="Node2D" parent="Parallax2D"]
+position = Vector2(-2592, -3372)
+rotation = -0.5952996
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D/Node2D10"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D3" type="Node2D" parent="Parallax2D"]
+position = Vector2(-2641, -797)
+rotation = 0.32121798
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D/Node2D3"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D4" type="Node2D" parent="Parallax2D"]
+position = Vector2(-2289.9998, -1400.9998)
+rotation = -0.064679414
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D/Node2D4"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D5" type="Node2D" parent="Parallax2D"]
+position = Vector2(-1604.0001, 933.001)
+rotation = 0.17736316
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D/Node2D5"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D6" type="Node2D" parent="Parallax2D"]
+position = Vector2(-1593.0005, 765.99976)
+rotation = -0.27654475
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D/Node2D6"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
+
+[node name="Node2D7" type="Node2D" parent="Parallax2D"]
+position = Vector2(-2385, -3421)
+rotation = 0.3259278
+scale = Vector2(0.33345476, 0.33345476)
+
+[node name="Branch2" type="Sprite2D" parent="Parallax2D/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(536.80664, 107.96069)
+texture = ExtResource("19_051s1")
+
+[node name="Branch3" type="Sprite2D" parent="Parallax2D/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(1510.214, -62.92491)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch4" type="Sprite2D" parent="Parallax2D/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(2461.5957, -364.2674)
+rotation = -0.25548825
+texture = ExtResource("19_051s1")
+
+[node name="Branch5" type="Sprite2D" parent="Parallax2D/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(3380.901, -588.8821)
+rotation = -0.122509316
+texture = ExtResource("19_051s1")
+
+[node name="Branch6" type="Sprite2D" parent="Parallax2D/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(4351.0044, -702.00806)
+rotation = -0.029487908
+texture = ExtResource("19_051s1")
+
+[node name="Branch7" type="Sprite2D" parent="Parallax2D/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(5328.451, -905.6001)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch8" type="Sprite2D" parent="Parallax2D/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(6247.565, -1250.3208)
+rotation = -0.2960971
+texture = ExtResource("19_051s1")
+
+[node name="Branch9" type="Sprite2D" parent="Parallax2D/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(7144.3833, -1677.9724)
+rotation = -0.5209899
+texture = ExtResource("19_051s1")
+
+[node name="Branch10" type="Sprite2D" parent="Parallax2D/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8018.1665, -2086.417)
+rotation = -0.28517377
+texture = ExtResource("19_051s1")
+
+[node name="Branch11" type="Sprite2D" parent="Parallax2D/Node2D7"]
+modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
+position = Vector2(8960.659, -2327.243)
+rotation = -0.08275591
+texture = ExtResource("19_051s1")
