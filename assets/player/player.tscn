@@ -8,11 +8,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7tmfp"]
 size = Vector2(32, 56)
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("feet", "side", "Particle_fx")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("feet", "side")]
 script = ExtResource("1_h6syq")
 feet = NodePath("feet")
 side = NodePath("side")
-Particle_fx = NodePath("")
 
 [node name="BoundingBox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_7tmfp")
