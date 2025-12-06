@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bkn5q7tc1ifuj"]
+[gd_scene load_steps=26 format=3 uid="uid://bkn5q7tc1ifuj"]
 
 [ext_resource type="PackedScene" uid="uid://bsktspv78ug47" path="res://assets/Particles/Jump.tscn" id="1_5qi50"]
 [ext_resource type="PackedScene" uid="uid://q1d7iycpesjo" path="res://assets/Prefab_kinda/Pause_Menu/controlPause.tscn" id="2_1apgh"]
@@ -19,6 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://cagkiki53uy1b" path="res://assets/sprites/flower3.png" id="18_5flq6"]
 [ext_resource type="Texture2D" uid="uid://b5fr2ehdvu5du" path="res://assets/sprites/branch_2.png" id="19_051s1"]
 [ext_resource type="Texture2D" uid="uid://bugxwog3r3sve" path="res://assets/sprites/black.png" id="19_uv1om"]
+[ext_resource type="Script" uid="uid://bo5d28h7vwjfn" path="res://assets/tutorial/tut_dialog.gd" id="20_mu7lp"]
+[ext_resource type="FontFile" uid="uid://de2oe4cfumvi2" path="res://assets/fonts/monogram.ttf" id="21_5qi50"]
+[ext_resource type="Texture2D" uid="uid://cbbiti1201cs0" path="res://assets/sprites/cystal.png" id="22_5qi50"]
 
 [sub_resource type="Environment" id="Environment_ca0bt"]
 background_mode = 3
@@ -27,6 +30,13 @@ tonemap_mode = 1
 glow_enabled = true
 glow_intensity = 0.16
 glow_bloom = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_1apgh"]
+font = ExtResource("21_5qi50")
+font_size = 32
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ue4po"]
+size = Vector2(586.5383, 260.97705)
 
 [node name="Node2D" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-932.0, -1842.0]
@@ -927,7 +937,7 @@ lift_height = -800.0
 lift_speed = 320.0
 
 [node name="Amethyst_Lift2" parent="level_geom" instance=ExtResource("9_vn460")]
-z_index = 3
+z_index = 6
 position = Vector2(246, -1442)
 lift_height = -1454.0
 lift_speed = 420.0
@@ -3752,3 +3762,100 @@ modulate = Color(0.4713341, 0.522367, 0.19910714, 1)
 position = Vector2(8960.659, -2327.243)
 rotation = -0.08275591
 texture = ExtResource("19_051s1")
+
+[node name="Tutorial2" type="Node2D" parent="."]
+position = Vector2(-1872, -740)
+script = ExtResource("20_mu7lp")
+
+[node name="Label" type="Label" parent="Tutorial2"]
+texture_filter = 1
+offset_left = -128.0
+offset_top = -125.0
+offset_right = 136.0
+offset_bottom = -36.0
+text = "place amethyst crystal
+    on platform!"
+label_settings = SubResource("LabelSettings_1apgh")
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="Tutorial2"]
+position = Vector2(18, 19)
+scale = Vector2(0.50659645, 0.8720921)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tutorial2/Area2D"]
+position = Vector2(8, -69)
+scale = Vector2(1.0400001, 1)
+shape = SubResource("RectangleShape2D_ue4po")
+
+[node name="Cystal5" type="Sprite2D" parent="."]
+modulate = Color(0.68701464, 0.3208525, 0.6928558, 1)
+position = Vector2(-321.99997, -580)
+rotation = 4.580486
+scale = Vector2(0.12707452, 0.12707452)
+texture = ExtResource("22_5qi50")
+flip_h = true
+
+[node name="Cystal6" type="Sprite2D" parent="."]
+modulate = Color(0.68701464, 0.3208525, 0.6928558, 1)
+position = Vector2(-151, -835.00006)
+rotation = 2.2396371
+scale = Vector2(0.12707452, 0.12707452)
+texture = ExtResource("22_5qi50")
+flip_h = true
+
+[node name="Cystal7" type="Sprite2D" parent="."]
+modulate = Color(0.68701464, 0.3208525, 0.6928558, 1)
+position = Vector2(3, -344.99997)
+rotation = 0.5416273
+scale = Vector2(0.12707452, 0.12707452)
+texture = ExtResource("22_5qi50")
+flip_h = true
+
+[node name="Cystal8" type="Sprite2D" parent="."]
+modulate = Color(0.68701464, 0.3208525, 0.6928558, 1)
+position = Vector2(334.99997, -717)
+rotation = -0.9086286
+scale = Vector2(0.17122407, 0.17122407)
+texture = ExtResource("22_5qi50")
+
+[node name="Cystal9" type="Sprite2D" parent="."]
+modulate = Color(0.68701464, 0.3208525, 0.6928558, 1)
+position = Vector2(-21, -73)
+rotation = 0.0341264
+scale = Vector2(0.17122407, 0.17122407)
+texture = ExtResource("22_5qi50")
+
+[node name="Cystal10" type="Sprite2D" parent="."]
+modulate = Color(0.68701464, 0.3208525, 0.6928558, 1)
+position = Vector2(-1555.0001, -2223.0002)
+rotation = -0.21496871
+scale = Vector2(0.17122407, 0.17122407)
+texture = ExtResource("22_5qi50")
+
+[node name="Cystal11" type="Sprite2D" parent="."]
+modulate = Color(0.68701464, 0.3208525, 0.6928558, 1)
+position = Vector2(-1951.0002, -2059.0002)
+rotation = 1.9950037
+scale = Vector2(0.17122407, 0.17122407)
+texture = ExtResource("22_5qi50")
+
+[node name="Cystal12" type="Sprite2D" parent="."]
+modulate = Color(0.68701464, 0.3208525, 0.6928558, 1)
+position = Vector2(290.00012, -3971.9998)
+rotation = 3.9410253
+scale = Vector2(0.17122407, 0.17122407)
+texture = ExtResource("22_5qi50")
+
+[node name="Cystal13" type="Sprite2D" parent="."]
+modulate = Color(0.68701464, 0.3208525, 0.6928558, 1)
+position = Vector2(329.00012, -3782.0002)
+rotation = 5.6770325
+scale = Vector2(0.17122407, 0.17122407)
+texture = ExtResource("22_5qi50")
+
+[node name="Cystal14" type="Sprite2D" parent="."]
+modulate = Color(0.68701464, 0.3208525, 0.6928558, 1)
+position = Vector2(293.99985, -3626)
+rotation = 3.7408688
+scale = Vector2(0.17122407, 0.17122407)
+texture = ExtResource("22_5qi50")
