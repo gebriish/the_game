@@ -1205,10 +1205,47 @@ scale = Vector2(0.18317746, 0.18317746)
 texture = ExtResource("16_dw3di")
 flip_h = true
 
+[node name="Flower17" type="Sprite2D" parent="."]
+modulate = Color(0.308989, 0.79175293, 0.76001126, 1)
+z_index = -6
+position = Vector2(1999.9999, -1360.0001)
+rotation = 0.48574132
+scale = Vector2(0.18317746, 0.18317746)
+texture = ExtResource("16_dw3di")
+flip_h = true
+
+[node name="Flower18" type="Sprite2D" parent="."]
+modulate = Color(0.308989, 0.79175293, 0.76001126, 1)
+z_index = -6
+position = Vector2(2682.0002, -480)
+rotation = 0.13250312
+scale = Vector2(0.18317746, 0.18317746)
+texture = ExtResource("16_dw3di")
+flip_h = true
+
+[node name="Flower19" type="Sprite2D" parent="."]
+modulate = Color(0.308989, 0.79175293, 0.76001126, 1)
+z_index = -6
+position = Vector2(3539.9998, 0.9999237)
+rotation = -0.48841935
+scale = Vector2(0.18317746, 0.18317746)
+texture = ExtResource("16_dw3di")
+flip_h = true
+
 [node name="Flower13" type="Sprite2D" parent="."]
 modulate = Color(0.7272795, 0.58444434, 0, 1)
 z_index = -6
 position = Vector2(759.9999, 127.999985)
+rotation = 1.8105898
+scale = Vector2(0.20376335, 0.20376335)
+texture = ExtResource("17_qia21")
+flip_h = true
+flip_v = true
+
+[node name="Flower20" type="Sprite2D" parent="."]
+modulate = Color(0.7272795, 0.58444434, 0, 1)
+z_index = -6
+position = Vector2(2485.9998, -921)
 rotation = 1.8105898
 scale = Vector2(0.20376335, 0.20376335)
 texture = ExtResource("17_qia21")
@@ -1239,6 +1276,33 @@ modulate = Color(0.98335296, 0.50354975, 0.53597426, 1)
 z_index = -6
 position = Vector2(1748, 219.00006)
 rotation = -0.53623223
+scale = Vector2(0.16993587, 0.16993587)
+texture = ExtResource("18_tg0qr")
+flip_h = true
+
+[node name="Flower11" type="Sprite2D" parent="."]
+modulate = Color(0.98335296, 0.50354975, 0.53597426, 1)
+z_index = -6
+position = Vector2(2002.0001, -7.0000114)
+rotation = 0.564703
+scale = Vector2(0.16993587, 0.16993587)
+texture = ExtResource("18_tg0qr")
+flip_h = true
+
+[node name="Flower12" type="Sprite2D" parent="."]
+modulate = Color(0.98335296, 0.50354975, 0.53597426, 1)
+z_index = -6
+position = Vector2(3527, -774.99994)
+rotation = -1.0271602
+scale = Vector2(0.16993587, 0.16993587)
+texture = ExtResource("18_tg0qr")
+flip_h = true
+
+[node name="Flower16" type="Sprite2D" parent="."]
+modulate = Color(0.98335296, 0.50354975, 0.53597426, 1)
+z_index = -6
+position = Vector2(3530, -1113)
+rotation = -1.0271602
 scale = Vector2(0.16993587, 0.16993587)
 texture = ExtResource("18_tg0qr")
 flip_h = true

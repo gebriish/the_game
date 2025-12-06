@@ -36,6 +36,7 @@ func _on_body_entered(body: Node) -> void:
 		player.has_amethyst = true
 		player.amethyst_node = self
 
+		$CollectSound.play()
 		collected = true
 		$Area2D.monitoring = false
 
