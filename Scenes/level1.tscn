@@ -1303,9 +1303,6 @@ position = Vector2(-4462, 1463)
 [node name="Pollen2" parent="Interractables" instance=ExtResource("11_dyvnm")]
 position = Vector2(-2329, 1880)
 
-[node name="Checkpoint_2" parent="Interractables" instance=ExtResource("10_66ky8")]
-position = Vector2(-55, 1778)
-
 [node name="Checkpoint_3" parent="Interractables" instance=ExtResource("10_66ky8")]
 position = Vector2(-949, 1473)
 

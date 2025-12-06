@@ -223,6 +223,9 @@ rotation = -0.2424502
 scale = Vector2(0.13277496, 0.36298567)
 texture = ExtResource("2_7ysb7")
 
+[node name="LookRay" type="RayCast2D" parent="GFX"]
+target_position = Vector2(300, 0)
+
 [node name="Killzone" parent="." instance=ExtResource("4_vep5s")]
 visible = false
 position = Vector2(-2, 0.99999994)
