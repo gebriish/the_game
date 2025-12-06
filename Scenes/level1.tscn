@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://c2spc5wsoic1"]
+[gd_scene load_steps=30 format=3 uid="uid://c2spc5wsoic1"]
 
 [ext_resource type="PackedScene" uid="uid://bsktspv78ug47" path="res://assets/Particles/Jump.tscn" id="1_dvjuv"]
 [ext_resource type="PackedScene" uid="uid://q1d7iycpesjo" path="res://assets/Prefab_kinda/Pause_Menu/controlPause.tscn" id="1_ybjcv"]
@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cvku1me4whylh" path="res://assets/level_prefabs/Checkpoint/checkpoint.tscn" id="10_66ky8"]
 [ext_resource type="PackedScene" uid="uid://ctrl7ma3y2b0k" path="res://assets/level_prefabs/pollen/pollen.tscn" id="11_dyvnm"]
 [ext_resource type="Texture2D" uid="uid://quaxt0o0ocs7" path="res://assets/sprites/ground.png" id="13_880tf"]
-[ext_resource type="PackedScene" uid="uid://ffcsr1khfugb" path="res://assets/level_prefabs/world_environment.tscn" id="13_tlxhh"]
+[ext_resource type="PackedScene" path="res://assets/level_prefabs/world_environment.tscn" id="13_tlxhh"]
 [ext_resource type="Texture2D" uid="uid://dd8dvs3f67af5" path="res://assets/sprites/st_5.png" id="14_e074f"]
 [ext_resource type="Texture2D" uid="uid://cfxdldw7uw2sq" path="res://assets/sprites/st_3.png" id="15_huosi"]
 [ext_resource type="Texture2D" uid="uid://dfpljxhyqriot" path="res://assets/sprites/st_2.png" id="17_pfp4v"]
@@ -22,7 +22,10 @@
 [ext_resource type="Texture2D" uid="uid://b5fr2ehdvu5du" path="res://assets/sprites/branch_2.png" id="21_fxw2b"]
 [ext_resource type="Texture2D" uid="uid://cajf6x4pb1nkj" path="res://assets/sprites/flower2.png" id="21_o7730"]
 [ext_resource type="Texture2D" uid="uid://cagkiki53uy1b" path="res://assets/sprites/flower3.png" id="22_o7730"]
+[ext_resource type="PackedScene" uid="uid://drjksjjp0itc3" path="res://assets/Prefab_kinda/Transition/transition.tscn" id="24_fg80b"]
+[ext_resource type="PackedScene" uid="uid://bv53rdbw0kbkd" path="res://assets/Prefab_kinda/Finish_point/finish_point.tscn" id="24_h54da"]
 [ext_resource type="Texture2D" uid="uid://bugxwog3r3sve" path="res://assets/sprites/black.png" id="24_jnat8"]
+[ext_resource type="Script" uid="uid://bs8aqybvwnltu" path="res://assets/Prefab_kinda/Finish_point/finish_point.gd" id="25_fg80b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ybjcv"]
 size = Vector2(32, 32)
@@ -42,7 +45,7 @@ size = Vector2(586.5383, 260.97705)
 position = Vector2(-233, -283)
 
 [node name="Player" parent="." node_paths=PackedStringArray("Particle_fx") instance=ExtResource("2_ybjcv")]
-position = Vector2(-156, -253)
+position = Vector2(-2836, -755)
 Particle_fx = NodePath("../Jump")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -5136,3 +5139,14 @@ flip_h = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("1_ybjcv")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Transition" parent="CanvasLayer2" instance=ExtResource("24_fg80b")]
+
+[node name="Finish_point" parent="." instance=ExtResource("24_h54da")]
+position = Vector2(-3006, -842)
+script = ExtResource("25_fg80b")
+location = "res://Scenes/level2.tscn"
+
+[connection signal="body_entered" from="Finish_point" to="Finish_point" method="_on_body_entered"]

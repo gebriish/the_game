@@ -1,5 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://bkn5q7tc1ifuj"]
+[gd_scene load_steps=30 format=3 uid="uid://bkn5q7tc1ifuj"]
 
+[ext_resource type="Script" uid="uid://dxcl00dp5j7bn" path="res://Scenes/Game_manager.gd" id="1_4jqg0"]
 [ext_resource type="PackedScene" uid="uid://bsktspv78ug47" path="res://assets/Particles/Jump.tscn" id="1_5qi50"]
 [ext_resource type="PackedScene" uid="uid://q1d7iycpesjo" path="res://assets/Prefab_kinda/Pause_Menu/controlPause.tscn" id="2_1apgh"]
 [ext_resource type="PackedScene" uid="uid://dprho8jmoqejn" path="res://assets/player/player.tscn" id="3_ue4po"]
@@ -22,6 +23,9 @@
 [ext_resource type="Script" uid="uid://bo5d28h7vwjfn" path="res://assets/tutorial/tut_dialog.gd" id="20_mu7lp"]
 [ext_resource type="FontFile" uid="uid://de2oe4cfumvi2" path="res://assets/fonts/monogram.ttf" id="21_5qi50"]
 [ext_resource type="Texture2D" uid="uid://cbbiti1201cs0" path="res://assets/sprites/cystal.png" id="22_5qi50"]
+[ext_resource type="PackedScene" uid="uid://drjksjjp0itc3" path="res://assets/Prefab_kinda/Transition/transition.tscn" id="23_ue4po"]
+[ext_resource type="PackedScene" uid="uid://bv53rdbw0kbkd" path="res://assets/Prefab_kinda/Finish_point/finish_point.tscn" id="24_uoomo"]
+[ext_resource type="Script" uid="uid://bs8aqybvwnltu" path="res://assets/Prefab_kinda/Finish_point/finish_point.gd" id="25_uoomo"]
 
 [sub_resource type="Environment" id="Environment_ca0bt"]
 background_mode = 3
@@ -39,6 +43,7 @@ font_size = 32
 size = Vector2(586.5383, 260.97705)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_4jqg0")
 metadata/_edit_horizontal_guides_ = [-932.0, -1842.0]
 
 [node name="Jump" parent="." instance=ExtResource("1_5qi50")]
@@ -52,7 +57,7 @@ position = Vector2(459, 444)
 player = NodePath("../../Player")
 
 [node name="Player" parent="." node_paths=PackedStringArray("Particle_fx") instance=ExtResource("3_ue4po")]
-position = Vector2(438, 432)
+position = Vector2(387, -4556)
 Particle_fx = NodePath("../Jump")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -3859,3 +3864,14 @@ position = Vector2(293.99985, -3626)
 rotation = 3.7408688
 scale = Vector2(0.17122407, 0.17122407)
 texture = ExtResource("22_5qi50")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Transition" parent="CanvasLayer2" instance=ExtResource("23_ue4po")]
+
+[node name="Finish_point" parent="." instance=ExtResource("24_uoomo")]
+position = Vector2(496.00003, -4725)
+script = ExtResource("25_uoomo")
+location = "res://Scenes/level3.tscn"
+
+[connection signal="body_entered" from="Finish_point" to="Finish_point" method="_on_body_entered"]

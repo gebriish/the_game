@@ -1,5 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://ccq4exb8gk87o"]
+[gd_scene load_steps=25 format=3 uid="uid://byp4wqpjsglrq"]
 
+[ext_resource type="Script" uid="uid://dxcl00dp5j7bn" path="res://Scenes/Game_manager.gd" id="1_jfxh1"]
 [ext_resource type="PackedScene" uid="uid://bsktspv78ug47" path="res://assets/Particles/Jump.tscn" id="1_tc3ri"]
 [ext_resource type="PackedScene" uid="uid://q1d7iycpesjo" path="res://assets/Prefab_kinda/Pause_Menu/controlPause.tscn" id="2_3nkac"]
 [ext_resource type="PackedScene" uid="uid://dprho8jmoqejn" path="res://assets/player/player.tscn" id="3_eqm1k"]
@@ -13,15 +14,19 @@
 [ext_resource type="PackedScene" uid="uid://cu1nlk2ttt3x" path="res://assets/level_prefabs/falling_block/falling_block.tscn" id="11_h6p24"]
 [ext_resource type="PackedScene" uid="uid://bsk1bmbq5bf8x" path="res://assets/level_prefabs/worker_ant/worker_ant.tscn" id="12_vn7r1"]
 [ext_resource type="Texture2D" uid="uid://quaxt0o0ocs7" path="res://assets/sprites/ground.png" id="13_vwkqt"]
-[ext_resource type="PackedScene" uid="uid://ffcsr1khfugb" path="res://assets/level_prefabs/world_environment.tscn" id="14_fpsp3"]
+[ext_resource type="PackedScene" path="res://assets/level_prefabs/world_environment.tscn" id="14_fpsp3"]
 [ext_resource type="Texture2D" uid="uid://bugxwog3r3sve" path="res://assets/sprites/black.png" id="15_wffsm"]
 [ext_resource type="Texture2D" uid="uid://cagkiki53uy1b" path="res://assets/sprites/flower3.png" id="16_dw3di"]
 [ext_resource type="Texture2D" uid="uid://ybtilaqb2uj4" path="res://assets/sprites/flower1.png" id="17_qia21"]
 [ext_resource type="Texture2D" uid="uid://cajf6x4pb1nkj" path="res://assets/sprites/flower2.png" id="18_tg0qr"]
 [ext_resource type="Texture2D" uid="uid://b5fr2ehdvu5du" path="res://assets/sprites/branch_2.png" id="19_p2sx0"]
 [ext_resource type="Texture2D" uid="uid://cbbiti1201cs0" path="res://assets/sprites/cystal.png" id="20_tc3ri"]
+[ext_resource type="PackedScene" uid="uid://drjksjjp0itc3" path="res://assets/Prefab_kinda/Transition/transition.tscn" id="21_eqm1k"]
+[ext_resource type="PackedScene" uid="uid://bv53rdbw0kbkd" path="res://assets/Prefab_kinda/Finish_point/finish_point.tscn" id="22_d08tm"]
+[ext_resource type="Script" uid="uid://bs8aqybvwnltu" path="res://assets/Prefab_kinda/Finish_point/finish_point.gd" id="23_d08tm"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_jfxh1")
 
 [node name="Jump" parent="." instance=ExtResource("1_tc3ri")]
 
@@ -34,7 +39,7 @@ position = Vector2(159, 268)
 player = NodePath("../../Player")
 
 [node name="Player" parent="." node_paths=PackedStringArray("Particle_fx") instance=ExtResource("3_eqm1k")]
-position = Vector2(176, 247)
+position = Vector2(3891, -1590)
 Particle_fx = NodePath("../Jump")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -1181,7 +1186,7 @@ scale = Vector2(5.2245355, 4.5541506)
 texture = ExtResource("15_wffsm")
 
 [node name="Amethyst" parent="." instance=ExtResource("7_qrg6c")]
-position = Vector2(2119, -1637)
+position = Vector2(3882, -1611)
 
 [node name="Amethyst_Lift" parent="." instance=ExtResource("6_mrxql")]
 position = Vector2(3873, -1522)
@@ -2471,3 +2476,15 @@ damping_max = 5.12
 angle_max = 360.0
 scale_amount_min = 0.02
 scale_amount_max = 0.04
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Transition" parent="CanvasLayer2" instance=ExtResource("21_eqm1k")]
+
+[node name="Finish_point" parent="." instance=ExtResource("22_d08tm")]
+position = Vector2(3879.0002, -2012)
+scale = Vector2(2.3559136, -1.1749712)
+script = ExtResource("23_d08tm")
+location = "res://Scenes/Thank_you.tscn"
+
+[connection signal="body_entered" from="Finish_point" to="Finish_point" method="_on_body_entered"]
