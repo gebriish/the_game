@@ -424,6 +424,10 @@ position = Vector2(544, -445)
 [node name="Checkpoint2" parent="Level_Stuff" instance=ExtResource("10_csbjj")]
 position = Vector2(1880, -1002)
 
+[node name="Checkpoint3" parent="Level_Stuff" instance=ExtResource("10_csbjj")]
+position = Vector2(2061.0002, -1653)
+rotation = 1.4493968
+
 [node name="Falling_Block2" parent="Level_Stuff" instance=ExtResource("11_h6p24")]
 position = Vector2(1011, 79)
 
@@ -487,6 +491,10 @@ position = Vector2(2871, 100)
 
 [node name="Spike39" parent="Level_Stuff" instance=ExtResource("8_1x0xh")]
 position = Vector2(2304, -853)
+rotation = 1.5679492
+
+[node name="Spike40" parent="Level_Stuff" instance=ExtResource("8_1x0xh")]
+position = Vector2(2305.0002, -651)
 rotation = 1.5679492
 
 [node name="Spike33" parent="Level_Stuff" instance=ExtResource("8_1x0xh")]

@@ -3870,7 +3870,7 @@ texture = ExtResource("22_5qi50")
 [node name="Transition" parent="CanvasLayer2" instance=ExtResource("23_ue4po")]
 
 [node name="Finish_point" parent="." instance=ExtResource("24_uoomo")]
-position = Vector2(496.00003, -4725)
+position = Vector2(507, -4727)
 script = ExtResource("25_uoomo")
 location = "res://Scenes/level3.tscn"
 

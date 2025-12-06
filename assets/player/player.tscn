@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dprho8jmoqejn"]
+[gd_scene load_steps=7 format=3 uid="uid://dprho8jmoqejn"]
 
 [ext_resource type="Script" uid="uid://bhdwfypnqwea1" path="res://assets/player/player_controller.gd" id="1_h6syq"]
 [ext_resource type="Texture2D" uid="uid://d24emgns8mtm2" path="res://assets/sprites/white.png" id="2_v2miy"]
 [ext_resource type="AudioStream" uid="uid://dn3g4x2ok68pq" path="res://assets/audio/jump.wav" id="3_v2miy"]
 [ext_resource type="Script" uid="uid://8owo5ayfyqpu" path="res://assets/player/stamina_bar.gd" id="4_ouxva"]
+[ext_resource type="AudioStream" uid="uid://byfbbwx4iuvin" path="res://assets/audio/menu_sound_track.ogg" id="5_d5dr7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7tmfp"]
 size = Vector2(32, 56)
@@ -125,3 +126,9 @@ position = Vector2(0, 27)
 
 [node name="side" type="Node2D" parent="."]
 position = Vector2(16, 27)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(315, 250)
+stream = ExtResource("5_d5dr7")
+volume_db = -8.0
+autoplay = true

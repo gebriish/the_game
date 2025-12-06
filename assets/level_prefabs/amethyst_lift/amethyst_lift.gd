@@ -55,6 +55,7 @@ func _on_body_exited(body: Node) -> void:
 	if body == player_trigger:
 		player_trigger = null
 
+
 func _draw() -> void:
 	if not debug_draw:
 		return

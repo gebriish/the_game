@@ -5147,7 +5147,7 @@ flip_h = true
 [node name="Transition" parent="CanvasLayer2" instance=ExtResource("24_fg80b")]
 
 [node name="Finish_point" parent="." instance=ExtResource("24_h54da")]
-position = Vector2(-3006, -842)
+position = Vector2(-3042, -840)
 script = ExtResource("25_fg80b")
 location = "res://Scenes/level2.tscn"
 
