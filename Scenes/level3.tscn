@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cu1nlk2ttt3x" path="res://assets/level_prefabs/falling_block/falling_block.tscn" id="11_h6p24"]
 [ext_resource type="PackedScene" uid="uid://bsk1bmbq5bf8x" path="res://assets/level_prefabs/worker_ant/worker_ant.tscn" id="12_vn7r1"]
 [ext_resource type="Texture2D" uid="uid://quaxt0o0ocs7" path="res://assets/sprites/ground.png" id="13_vwkqt"]
-[ext_resource type="PackedScene" path="res://assets/level_prefabs/world_environment.tscn" id="14_fpsp3"]
+[ext_resource type="PackedScene" uid="uid://ffcsr1khfugb" path="res://assets/level_prefabs/world_environment.tscn" id="14_fpsp3"]
 [ext_resource type="Texture2D" uid="uid://bugxwog3r3sve" path="res://assets/sprites/black.png" id="15_wffsm"]
 [ext_resource type="Texture2D" uid="uid://cagkiki53uy1b" path="res://assets/sprites/flower3.png" id="16_dw3di"]
 [ext_resource type="Texture2D" uid="uid://ybtilaqb2uj4" path="res://assets/sprites/flower1.png" id="17_qia21"]
@@ -39,7 +39,7 @@ position = Vector2(159, 268)
 player = NodePath("../../Player")
 
 [node name="Player" parent="." node_paths=PackedStringArray("Particle_fx") instance=ExtResource("3_eqm1k")]
-position = Vector2(3891, -1590)
+position = Vector2(170, 270)
 Particle_fx = NodePath("../Jump")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -1186,7 +1186,7 @@ scale = Vector2(5.2245355, 4.5541506)
 texture = ExtResource("15_wffsm")
 
 [node name="Amethyst" parent="." instance=ExtResource("7_qrg6c")]
-position = Vector2(3882, -1611)
+position = Vector2(2117, -1615)
 
 [node name="Amethyst_Lift" parent="." instance=ExtResource("6_mrxql")]
 position = Vector2(3873, -1522)

@@ -1,8 +1,12 @@
 extends Node2D
 
-@onready var transition: Node2D = $CanvasLayer2/Transition
+@onready var transition := $CanvasLayer2/Transition
+@onready var anim: AnimationPlayer = transition.get_node("AnimationPlayer")
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	transition.get_node("AnimationPlayer").play_backwards("Transition")
-	
+	var a := "Transition"
+	var length := anim.get_animation(a).length
+
+	anim.play(a)                   
+	anim.seek(length, true)         
+	anim.play_backwards(a)        

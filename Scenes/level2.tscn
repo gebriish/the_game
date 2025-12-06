@@ -57,7 +57,7 @@ position = Vector2(459, 444)
 player = NodePath("../../Player")
 
 [node name="Player" parent="." node_paths=PackedStringArray("Particle_fx") instance=ExtResource("3_ue4po")]
-position = Vector2(387, -4556)
+position = Vector2(455, 454)
 Particle_fx = NodePath("../Jump")
 
 [node name="Camera2D" type="Camera2D" parent="."]

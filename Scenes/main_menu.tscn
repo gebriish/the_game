@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ciaa83hid64qs" path="res://assets/level_prefabs/block.tscn" id="4_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://cajf6x4pb1nkj" path="res://assets/sprites/flower2.png" id="4_n45e2"]
 [ext_resource type="Texture2D" uid="uid://ybtilaqb2uj4" path="res://assets/sprites/flower1.png" id="6_opfnp"]
-[ext_resource type="Script" path="res://assets/level_prefabs/sway.gd" id="7_cp0ys"]
+[ext_resource type="Script" uid="uid://by66hiy02pb2g" path="res://assets/level_prefabs/sway.gd" id="7_cp0ys"]
 [ext_resource type="PackedScene" uid="uid://drjksjjp0itc3" path="res://assets/Prefab_kinda/Transition/transition.tscn" id="8_yhxw7"]
 
 [node name="Main_Menu" type="Node2D"]
