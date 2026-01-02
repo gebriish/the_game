@@ -83,6 +83,13 @@ func _physics_process(delta: float) -> void:
 			stuck_timer = 0.0
 
 	last_position = global_position
+func _ray_hits_player_or_near_target(from_pos: Vector2, to_pos: Vector2, player: Node2D, los_mask: int) -> bool:
+	var params := PhysicsRayQueryParameters2D.new()
+	params.from = from_pos
+	params.to = to_pos
+	params.collide_with_areas = false
+	params.collision_mask = los_mask
+	params.exclude = [self]
 
 
 func state_patrol(delta: float) -> void:
@@ -99,6 +106,8 @@ func state_patrol(delta: float) -> void:
 			return
 
 	velocity.x = lerp(velocity.x, direction * patrol_speed, 6.0 * delta)
+# ------------------------------------------------------------
+
 
 
 func state_spot(delta: float) -> void:
